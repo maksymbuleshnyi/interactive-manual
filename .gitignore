@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.python-version
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Pipeline outputs and logs
+outputs/
+logs/raw/
+logs/runs/*/stdout.log
+logs/runs/*/stderr.log
+
+# Keep the directory structure
+!logs/.gitkeep
+!logs/runs/.gitkeep
+!logs/raw/.gitkeep
+!outputs/.gitkeep
