@@ -1,0 +1,21 @@
+{
+  "run_id": "20260517T001809Z-0d9681fa-wiper",
+  "timestamp": "2026-05-17T00:18:09.699836+00:00",
+  "git_sha": "1ade4402554bfe9f7f0836c0024dcf69e33aa461",
+  "python_version": "3.13.7",
+  "command": "critique_demo",
+  "argv": [
+    "scripts/critique_demo.py",
+    "--demo",
+    "outputs/wiper-001/demo.json",
+    "--run-name",
+    "wiper"
+  ],
+  "adapters": {
+    "critic": "mock"
+  },
+  "env_var_names": [],
+  "input_file_hashes": {
+    "outputs/wiper-001/demo.json": "0d631d8023ea1a0738ae9c8f87954a1ee6c540a1a7a18d2a00c8de2af0a12844"
+  }
+}

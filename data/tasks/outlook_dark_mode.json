@@ -1,0 +1,8 @@
+{
+  "task_id": "outlook-darkmode-001",
+  "domain": "software_ui",
+  "user_goal": "Enable dark mode in the Outlook desktop application.",
+  "initial_image_path": "data/seeds/outlook_light.png",
+  "source_type": "manually_written",
+  "notes": "Author-written task spec. Seed screenshot to be captured before Experiment 2."
+}

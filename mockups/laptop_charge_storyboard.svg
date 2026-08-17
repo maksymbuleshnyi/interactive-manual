@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1020" viewBox="0 0 1520 1020" font-family="Helvetica,Arial,sans-serif">
+<rect width="1520" height="1020" fill="#f4f5f7"/>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#ff7f0e"/></marker><marker id="arrk" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#555"/></marker></defs>
+<text x="40" y="46" font-size="30" font-weight="700" fill="#1c2330">Grounded manual: from one photo to object-centric steps</text>
+<rect x="40" y="70" width="440" height="270" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="58" y="100" font-size="18" font-weight="700" fill="#1c2330">1 - What comes in: your photo</text>
+<g transform="translate(110,108) scale(1.05)"><rect x="20" y="24" width="212" height="20" rx="6" fill="#2f2f2f"/><rect x="40" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="68" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="96" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="124" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="152" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="180" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="208" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><circle cx="222" cy="34" r="3" fill="#39d353"/><path d="M164,146 C150,196 214,150 251,156" fill="none" stroke="#333" stroke-width="3"/><rect x="210" y="76" width="76" height="50" rx="4" fill="#cdd2d8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="214" y="80" width="68" height="36" rx="2" fill="#222"/><rect x="207" y="100" width="5" height="8" fill="#444"/><rect x="140" y="104" width="48" height="42" rx="9" fill="#f8f8f8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="92" y="112" width="24" height="24" rx="5" fill="#e6e8ea" stroke="#b9bcc1" stroke-width="1.2"/><rect x="44" y="100" width="26" height="26" rx="5" fill="#f2f2f2" stroke="#b9bcc1" stroke-width="1.2"/><rect x="238" y="150" width="26" height="16" rx="3" fill="#333333" stroke="#b9bcc1" stroke-width="1.2"/></g>
+<text x="60" y="322" font-size="13" fill="#5b6472">One photo of your space. Add more later to sharpen any object.</text>
+<path d="M495,205 L545,205" stroke="#9aa0a6" stroke-width="4" marker-end="url(#arrk)"/>
+<rect x="560" y="70" width="420" height="270" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="578" y="100" font-size="18" font-weight="700" fill="#1c2330">2 - Keep only the important objects</text>
+<rect x="582" y="112" width="376" height="34" rx="8" fill="#f0f6ff" stroke="#cfe0ff"/>
+<circle cx="602" cy="129" r="6" fill="#ff7f0e"/>
+<text x="618" y="134" font-size="14" fill="#1c2330">1  NA flat-blade plug head</text>
+<rect x="582" y="154" width="376" height="34" rx="8" fill="#f0f6ff" stroke="#cfe0ff"/>
+<circle cx="602" cy="171" r="6" fill="#ff7f0e"/>
+<text x="618" y="176" font-size="14" fill="#1c2330">2  white power adapter</text>
+<rect x="582" y="196" width="376" height="34" rx="8" fill="#f0f6ff" stroke="#cfe0ff"/>
+<circle cx="602" cy="213" r="6" fill="#ff7f0e"/>
+<text x="618" y="218" font-size="14" fill="#1c2330">3  power-strip outlet</text>
+<rect x="582" y="238" width="376" height="34" rx="8" fill="#f0f6ff" stroke="#cfe0ff"/>
+<circle cx="602" cy="255" r="6" fill="#ff7f0e"/>
+<text x="618" y="260" font-size="14" fill="#1c2330">4  cable connector tip</text>
+<rect x="582" y="280" width="376" height="34" rx="8" fill="#f0f6ff" stroke="#cfe0ff"/>
+<circle cx="602" cy="297" r="6" fill="#ff7f0e"/>
+<text x="618" y="302" font-size="14" fill="#1c2330">5  laptop charging port</text>
+<text x="582" y="332" font-size="13" fill="#5b6472">Room/background ignored. Only these get a 3D model.</text>
+<rect x="1000" y="70" width="480" height="270" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="1018" y="100" font-size="18" font-weight="700" fill="#1c2330">Understand a joint? Rotate the 3D</text>
+<g transform="translate(1150,150)"><rect x="-40" y="-20" width="80" height="64" rx="8" fill="#eef1f5" stroke="#cfd6df"/><rect x="-22" y="-2" width="30" height="26" rx="4" fill="#f8f8f8" stroke="#ff7f0e" stroke-width="2.5"/><path d="M30,-30 a44,44 0 1 1 -2,-1" fill="none" stroke="#2a7de1" stroke-width="3" marker-end="url(#arrk)"/></g>
+<text x="1024" y="262" font-size="13" fill="#5b6472">Only the few important objects need real</text>
+<text x="1024" y="282" font-size="13" fill="#5b6472">geometry - and you add photos to build it</text>
+<text x="1024" y="302" font-size="13" fill="#5b6472">on demand, where you want to look closer.</text>
+<rect x="40" y="380" width="450" height="600" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="58" y="410" font-size="18" font-weight="700" fill="#1c2330">Step 1 - Attach plug head</text>
+<g transform="translate(110,432) scale(1.0)"><rect x="20" y="24" width="212" height="20" rx="6" fill="#2f2f2f"/><rect x="40" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="68" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="96" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="124" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="152" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="180" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="208" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><circle cx="222" cy="34" r="3" fill="#39d353"/><path d="M164,146 C150,196 214,150 251,156" fill="none" stroke="#333" stroke-width="3"/><rect x="210" y="76" width="76" height="50" rx="4" fill="#cdd2d8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="214" y="80" width="68" height="36" rx="2" fill="#222"/><rect x="207" y="100" width="5" height="8" fill="#444"/><rect x="140" y="104" width="48" height="42" rx="9" fill="#f8f8f8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="92" y="112" width="24" height="24" rx="5" fill="#e6e8ea" stroke="#cfcfcf" stroke-width="1" opacity="0.4"/><rect x="44" y="100" width="26" height="26" rx="5" fill="#f2f2f2" stroke="#ff7f0e" stroke-width="3.5"/><rect x="238" y="150" width="26" height="16" rx="3" fill="#333333" stroke="#b9bcc1" stroke-width="1.2"/><rect x="150" y="96" width="26" height="26" rx="5" fill="#f2f2f2" stroke="#d62728" stroke-width="2" stroke-dasharray="4 3" opacity="0.45"/><circle cx="164" cy="104" r="16" fill="none" stroke="#d62728" stroke-width="3"/><text x="183" y="108" font-size="12" font-weight="700" fill="#d62728">HERE</text><text x="38" y="93" font-size="12" font-weight="700" fill="#ff7f0e">TAKE</text><path d="M57.0,113.0 Q110.5,78 164,104" fill="none" stroke="#ff7f0e" stroke-width="3" marker-end="url(#arr)"/></g>
+<rect x="60" y="680" width="410" height="46" rx="8" fill="#161a20"/>
+<text x="74" y="709" font-size="14" fill="#ffffff">Clip the flat-blade plug onto the white adapter.</text>
+<text x="62" y="746" font-size="12" font-weight="700" fill="#5b6472">CONNECTIONS</text>
+<rect x="62" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="74" y="772" font-size="12" fill="#2ca02c">&#10003; head-adapter</text>
+<rect x="202" y="752" width="132" height="30" rx="15" fill="#f1f2f4" stroke="#d4d7dc"/>
+<text x="214" y="772" font-size="12" fill="#9aa0a6">adapter-strip</text>
+<rect x="342" y="752" width="132" height="30" rx="15" fill="#f1f2f4" stroke="#d4d7dc"/>
+<text x="354" y="772" font-size="12" fill="#9aa0a6">cable-laptop</text>
+<rect x="398" y="394" width="74" height="26" rx="13" fill="#eef1f5"/>
+<text x="410" y="411" font-size="12" font-weight="700" fill="#5b6472">1 of 3</text>
+<rect x="372" y="804" width="96" height="34" rx="17" fill="#2ca02c"/>
+<text x="390" y="826" font-size="14" font-weight="700" fill="#fff">Done &#10003;</text>
+<rect x="535" y="380" width="450" height="600" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="553" y="410" font-size="18" font-weight="700" fill="#1c2330">Step 2 - Plug into outlet</text>
+<g transform="translate(605,432) scale(1.0)"><rect x="20" y="24" width="212" height="20" rx="6" fill="#2f2f2f"/><rect x="40" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="68" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="96" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="124" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="152" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="180" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="208" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><circle cx="222" cy="34" r="3" fill="#39d353"/><path d="M164,146 C150,196 214,150 251,156" fill="none" stroke="#333" stroke-width="3"/><rect x="210" y="76" width="76" height="50" rx="4" fill="#cdd2d8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="214" y="80" width="68" height="36" rx="2" fill="#222"/><rect x="207" y="100" width="5" height="8" fill="#444"/><rect x="140" y="104" width="48" height="42" rx="9" fill="#f8f8f8" stroke="#ff7f0e" stroke-width="3.5"/><rect x="92" y="112" width="24" height="24" rx="5" fill="#e6e8ea" stroke="#b9bcc1" stroke-width="1.2"/><rect x="44" y="100" width="26" height="26" rx="5" fill="#f2f2f2" stroke="#b9bcc1" stroke-width="1.2"/><rect x="238" y="150" width="26" height="16" rx="3" fill="#333333" stroke="#b9bcc1" stroke-width="1.2"/><rect x="112" y="60" width="48" height="42" rx="9" fill="#f8f8f8" stroke="#d62728" stroke-width="2" stroke-dasharray="4 3" opacity="0.45"/><circle cx="118" cy="34" r="16" fill="none" stroke="#d62728" stroke-width="3"/><text x="137" y="38" font-size="12" font-weight="700" fill="#d62728">HERE</text><text x="134" y="97" font-size="12" font-weight="700" fill="#ff7f0e">TAKE</text><path d="M164.0,125.0 Q141.0,8 118,34" fill="none" stroke="#ff7f0e" stroke-width="3" marker-end="url(#arr)"/></g>
+<rect x="555" y="680" width="410" height="46" rx="8" fill="#161a20"/>
+<text x="569" y="709" font-size="14" fill="#ffffff">Plug the adapter into an empty outlet.</text>
+<text x="557" y="746" font-size="12" font-weight="700" fill="#5b6472">CONNECTIONS</text>
+<rect x="557" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="569" y="772" font-size="12" fill="#2ca02c">&#10003; head-adapter</text>
+<rect x="697" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="709" y="772" font-size="12" fill="#2ca02c">&#10003; adapter-strip</text>
+<rect x="837" y="752" width="132" height="30" rx="15" fill="#f1f2f4" stroke="#d4d7dc"/>
+<text x="849" y="772" font-size="12" fill="#9aa0a6">cable-laptop</text>
+<rect x="893" y="394" width="74" height="26" rx="13" fill="#eef1f5"/>
+<text x="905" y="411" font-size="12" font-weight="700" fill="#5b6472">2 of 3</text>
+<rect x="867" y="804" width="96" height="34" rx="17" fill="#2ca02c"/>
+<text x="885" y="826" font-size="14" font-weight="700" fill="#fff">Done &#10003;</text>
+<rect x="1030" y="380" width="450" height="600" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/><text x="1048" y="410" font-size="18" font-weight="700" fill="#1c2330">Step 3 - Connect to laptop</text>
+<g transform="translate(1100,432) scale(1.0)"><rect x="20" y="24" width="212" height="20" rx="6" fill="#2f2f2f"/><rect x="40" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="68" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="96" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="124" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="152" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="180" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><rect x="208" y="30" width="8" height="8" rx="1.5" fill="#6a6a6a"/><circle cx="222" cy="34" r="3" fill="#39d353"/><path d="M164,146 C150,196 214,150 251,156" fill="none" stroke="#333" stroke-width="3"/><rect x="210" y="76" width="76" height="50" rx="4" fill="#cdd2d8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="214" y="80" width="68" height="36" rx="2" fill="#222"/><rect x="207" y="100" width="5" height="8" fill="#444"/><rect x="140" y="104" width="48" height="42" rx="9" fill="#f8f8f8" stroke="#b9bcc1" stroke-width="1.2"/><rect x="92" y="112" width="24" height="24" rx="5" fill="#e6e8ea" stroke="#b9bcc1" stroke-width="1.2"/><rect x="44" y="100" width="26" height="26" rx="5" fill="#f2f2f2" stroke="#b9bcc1" stroke-width="1.2"/><rect x="238" y="150" width="26" height="16" rx="3" fill="#333333" stroke="#ff7f0e" stroke-width="3.5"/><rect x="196" y="98" width="26" height="16" rx="3" fill="#333333" stroke="#d62728" stroke-width="2" stroke-dasharray="4 3" opacity="0.45"/><circle cx="208" cy="100" r="16" fill="none" stroke="#d62728" stroke-width="3"/><text x="227" y="104" font-size="12" font-weight="700" fill="#d62728">HERE</text><text x="232" y="143" font-size="12" font-weight="700" fill="#ff7f0e">TAKE</text><path d="M251.0,158.0 Q229.5,74 208,100" fill="none" stroke="#ff7f0e" stroke-width="3" marker-end="url(#arr)"/></g>
+<rect x="1050" y="680" width="410" height="46" rx="8" fill="#161a20"/>
+<text x="1064" y="709" font-size="14" fill="#ffffff">Connect the cable to the laptop port.</text>
+<text x="1052" y="746" font-size="12" font-weight="700" fill="#5b6472">CONNECTIONS</text>
+<rect x="1052" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="1064" y="772" font-size="12" fill="#2ca02c">&#10003; head-adapter</text>
+<rect x="1192" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="1204" y="772" font-size="12" fill="#2ca02c">&#10003; adapter-strip</text>
+<rect x="1332" y="752" width="132" height="30" rx="15" fill="#e7f6ec" stroke="#2ca02c"/>
+<text x="1344" y="772" font-size="12" fill="#2ca02c">&#10003; cable-laptop</text>
+<rect x="1388" y="394" width="74" height="26" rx="13" fill="#eef1f5"/>
+<text x="1400" y="411" font-size="12" font-weight="700" fill="#5b6472">3 of 3</text>
+<rect x="1362" y="804" width="96" height="34" rx="17" fill="#2ca02c"/>
+<text x="1380" y="826" font-size="14" font-weight="700" fill="#fff">Done &#10003;</text>
+<text x="60" y="900" font-size="13" font-weight="700" fill="#5b6472">LEGEND</text>
+<rect x="160" y="887" width="16" height="16" rx="3" fill="none" stroke="#ff7f0e" stroke-width="3"/>
+<text x="184" y="900" font-size="13" fill="#3a4250">orange = take this part</text>
+<rect x="430" y="887" width="16" height="16" rx="3" fill="none" stroke="#d62728" stroke-width="3"/>
+<text x="454" y="900" font-size="13" fill="#3a4250">red ring = put it here</text>
+<rect x="700" y="887" width="16" height="16" rx="3" fill="none" stroke="#999" stroke-width="3"/>
+<text x="724" y="900" font-size="13" fill="#3a4250">dashed = ghost at target</text>
+<rect x="970" y="887" width="16" height="16" rx="3" fill="none" stroke="#2ca02c" stroke-width="3"/>
+<text x="994" y="900" font-size="13" fill="#3a4250">green = connection made</text>
+</svg>

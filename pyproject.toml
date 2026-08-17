@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interactive-interfaces"
+version = "0.1.0"
+description = "MVP data-generation pipeline for chatbot-generated interactive visual guidance."
+readme = "README.md"
+requires-python = ">=3.11"
+# Stage 0-1 deps only. No vendor SDKs: all model access goes through the
+# LLMClient / ImageEditClient / CriticClient protocols (added in Stage 1).
+dependencies = [
+    "pydantic>=2.6",
+    "typer>=0.12",
+    "pillow>=10.0",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+# Real LLM vendor (Stage 2). The core stays vendor-agnostic: this is opt-in
+# and only imported when the "claude" adapter is selected (see registry.py).
+claude = ["anthropic>=0.40"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

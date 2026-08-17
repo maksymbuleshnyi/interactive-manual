@@ -1,0 +1,8 @@
+{
+  "task_id": "wiper-001",
+  "domain": "physical_repair",
+  "user_goal": "Replace the front driver-side windshield wiper blade on a car.",
+  "initial_image_path": "data/seeds/wiper.jpg",
+  "source_type": "manually_written",
+  "notes": "Author-written task spec. Seed photo to be captured before Experiment 1."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "task_id": "wiper-001",
+  "domain": "physical_repair",
+  "user_goal": "Replace the front driver-side windshield wiper blade on a car.",
+  "initial_image_path": "data/examples/wiper-001/initial.jpg",
+  "initial_state_description": "A car windshield seen from the front. The driver-side wiper arm rests flat against the glass with the old, worn wiper blade attached.",
+  "procedure_text": "Lift the wiper arm away from the windshield until it locks upright. Press the release tab on the old blade and slide the blade off the hook. Slide the new blade onto the hook until it clicks. Lower the wiper arm gently back onto the glass.",
+  "steps": [
+    {
+      "step_index": 0,
+      "current_image_path": "data/examples/wiper-001/initial.jpg",
+      "current_state_description": "The driver-side wiper arm rests flat against the windshield with the old blade attached.",
+      "natural_language_instruction": "Lift the wiper arm away from the windshield until it locks in the upright position.",
+      "expected_user_action": "lift the wiper arm",
+      "image_generation_prompt": "The same car windshield from the same camera angle and lighting. The driver-side wiper arm is now raised upright, standing perpendicular to and away from the glass, with the old blade still attached. Preserve the background, the hood, and the passenger-side wiper unchanged.",
+      "image_model": "placeholder",
+      "image_model_params": {},
+      "generated_next_image_path": "data/examples/wiper-001/step_0.jpg",
+      "next_state_description": "The driver-side wiper arm stands upright, perpendicular to the windshield, holding the old blade away from the glass.",
+      "safety_notes": [
+        "Keep a hand on the raised arm; if released it can snap back onto the glass and crack the windshield."
+      ],
+      "critique": null,
+      "failure_modes": [],
+      "human_review_status": "approved",
+      "quality_score": null
+    }
+  ],
+  "source_type": "manually_written",
+  "provenance": {
+    "author": "Maksym Buleshnyi",
+    "date": "2026-05-17",
+    "license": "CC0-1.0",
+    "notes": "Hand-authored Stage 0 seed demonstration. Both images are synthetic placeholders generated programmatically, not real photos; see docs/DECISIONS.md decision D2."
+  },
+  "safety_notes": [
+    "Task stays within data/tasks/SAFE_DOMAINS.md: no medical, electrical, fuel, or brake/airbag work."
+  ],
+  "overall_quality_score": null,
+  "overall_review_status": "pending",
+  "tags": ["physical_repair", "automotive", "seed"],
+  "run_log_path": null
+}

@@ -1,0 +1,8 @@
+{
+  "task_id": "wiper-004",
+  "domain": "physical_repair",
+  "user_goal": "Replace the front driver-side windshield wiper blade on a pickup truck.",
+  "initial_image_path": "data/seeds/wiper_pickup.jpg",
+  "source_type": "manually_written",
+  "notes": "Experiment 1 variant: long blade, tall windshield, pin-style arm connector. Seed photo to be captured."
+}

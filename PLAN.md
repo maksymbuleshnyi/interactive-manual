@@ -1,8 +1,9 @@
 # From Text Answers to Interactive Interfaces — MVP Plan
 
-> Status: planning. No code yet. This document is the source of truth for the
-> first milestone. See `docs/DECISIONS.md` for a running log of decisions made
-> while executing this plan.
+> Status: Stages 0-1 complete; Stage 2 (real Claude LLM adapter) implemented
+> and tested, Experiment 1 pending. This document is the source of truth for
+> the first milestone. See `docs/DECISIONS.md` for a running log of decisions
+> made while executing this plan.
 
 ## A. Research and engineering plan (concise)
 
