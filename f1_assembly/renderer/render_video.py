@@ -144,10 +144,13 @@ def main():
                    generator=g).images[0]
         mem = img                   # the model's own output, as when served
         sp = os.path.join(a.data, 'sch_' + f['stem'] + '.png')
-        left = (load('sch_' + f['stem']) if a.left == 'sch'
-                and os.path.exists(sp) else depth)
-        tiles = [(left, 'schematic the agent built' if a.left == 'sch'
-                  else 'blockout depth'),
+        # label what is actually drawn: --left sch falls back to depth when
+        # the schematics were never captured, and a caption that lies about
+        # which panel is which is worse than no caption
+        use_sch = a.left == 'sch' and os.path.exists(sp)
+        left = load('sch_' + f['stem']) if use_sch else depth
+        tiles = [(left, 'schematic the agent built' if use_sch
+                  else 'blockout depth the agent built'),
                  (img.resize((a.res, a.res)), 'neural render')]
         if a.panels == 3:
             tiles.append((truth, 'target render'))

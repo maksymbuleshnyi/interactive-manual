@@ -12,9 +12,12 @@ The object is a 3D printed Formula One kit: 23 parts, 17 assembly steps. It
 was chosen over furniture because an agent cannot reproduce it from the manual
 alone and its structure is much less regular.
 
-    left panel                        right panel
-    line-art schematic from    ->     photographic frame from a
-    the agent's primitives            fine-tuned diffusion renderer
+![blockout on the left, neural render on the right](docs/demo.gif)
+
+Left is everything the model is given about shape: the depth of a handful of
+boxes and cylinders. Right is what it renders from that. The wings, the
+suspension arms and the surface detail are not in the input, so the model is
+filling in geometry, not just shading it. Full clip: [`docs/manual_demo.mp4`](docs/manual_demo.mp4).
 
 ## Layout
 
