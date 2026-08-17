@@ -1,0 +1,684 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>F1 build — cinematic</title>
+<style>html,body{margin:0;background:#0b0c0f;overflow:hidden}
+canvas{display:block;margin:0 auto}
+#hud{position:fixed;left:10px;bottom:8px;color:#7c838f;font:12px system-ui}</style>
+<script type="importmap">{"imports":{
+ "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+ "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head><body>
+<canvas id="c"></canvas><div id="hud">loading…</div>
+<script type="module">
+import * as THREE from 'three';
+import {STLLoader} from 'three/addons/loaders/STLLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {RectAreaLightUniformsLib} from 'three/addons/lights/RectAreaLightUniformsLib.js';
+import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
+import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
+import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
+import {BokehPass} from 'three/addons/postprocessing/BokehPass.js';
+import {ShaderPass} from 'three/addons/postprocessing/ShaderPass.js';
+import {OutputPass} from 'three/addons/postprocessing/OutputPass.js';
+
+const Q = new URLSearchParams(location.search);
+const CAPTURE = Q.get('capture') === '1';
+const NFRAMES = parseInt(Q.get('frames') || '240');
+const W = parseInt(Q.get('w') || '1280'), H = parseInt(Q.get('h') || '720');
+const hud = document.getElementById('hud');
+
+const man = await (await fetch('viewer_manifest.json')).json();
+const PARTS = man.parts, GLUE = man.glue || {};
+const names = Object.keys(PARTS);
+
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true});
+renderer.setPixelRatio(1);
+renderer.setSize(W, H, false);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(38, W/H, 1, 8000);
+RectAreaLightUniformsLib.init();
+{
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(new RoomEnvironment(), 0.03).texture;
+}
+
+// ---------------- workshop ----------------
+const TABLE_TOP = 0, FLOOR_Y = -735;
+function noiseCanvas(S, fill){
+  const c = document.createElement('canvas'); c.width = c.height = S;
+  const x = c.getContext('2d'); x.fillStyle = fill; x.fillRect(0,0,S,S);
+  return [c, x];
+}
+function woodTexture(S, reps){
+  const [c, x] = noiseCanvas(S, '#6d4a2e');
+  for (let i=0;i<160;i++){
+    const g = x.createLinearGradient(0, Math.random()*S, 0, Math.random()*S);
+    g.addColorStop(0,'rgba(120,74,40,0)');
+    g.addColorStop(0.5,'rgba('+(90+Math.random()*70|0)+','+(55+Math.random()*40|0)+
+                   ','+(28+Math.random()*24|0)+','+(0.05+Math.random()*0.09)+')');
+    g.addColorStop(1,'rgba(120,74,40,0)');
+    x.fillStyle = g; x.fillRect(0,0,S,S);
+  }
+  for (let i=0;i<3600;i++){
+    const y0 = Math.random()*S, len = S*(0.25+Math.random()*0.85);
+    const x0 = Math.random()*S - len*0.2;
+    const dark = Math.random() < 0.55;
+    x.strokeStyle = 'rgba('+(dark?'62,36,16':'196,150,104')+','+
+                    (0.025+Math.random()*0.085)+')';
+    x.lineWidth = 0.5 + Math.random()*2.4;
+    x.beginPath(); x.moveTo(x0, y0);
+    const amp = 1.5+Math.random()*3.5, ph = Math.random()*6.28;
+    for (let t=0;t<=1.0001;t+=0.04)
+      x.lineTo(x0+len*t, y0+Math.sin(ph+t*6.28*1.3)*amp);
+    x.stroke();
+  }
+  for (let i=0;i<80;i++){
+    const sx = Math.random()*S, sy = Math.random()*S;
+    const len = 20+Math.random()*140, ang = (Math.random()-0.5)*0.9;
+    x.strokeStyle = 'rgba('+(Math.random()<0.5?'232,214,190':'48,28,12')+','+
+                    (0.05+Math.random()*0.13)+')';
+    x.lineWidth = 0.5+Math.random()*1.1;
+    x.beginPath(); x.moveTo(sx,sy);
+    x.lineTo(sx+Math.cos(ang)*len, sy+Math.sin(ang)*len); x.stroke();
+  }
+  for (let i=0;i<10;i++){
+    const sx=Math.random()*S, sy=Math.random()*S, r=6+Math.random()*22;
+    const g2 = x.createRadialGradient(sx,sy,0,sx,sy,r);
+    g2.addColorStop(0,'rgba(52,32,16,0.22)'); g2.addColorStop(1,'rgba(52,32,16,0)');
+    x.fillStyle=g2; x.beginPath(); x.arc(sx,sy,r,0,6.29); x.fill();
+  }
+  x.strokeStyle='rgba(40,22,10,0.5)'; x.lineWidth=2.5;
+  for (let i=1;i<4;i++){ x.beginPath(); x.moveTo(0,i*S/4); x.lineTo(S,i*S/4); x.stroke(); }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(reps,reps); t.anisotropy = 8;
+  return t;
+}
+const woodMap = woodTexture(1024,1);
+const woodMat = new THREE.MeshPhysicalMaterial({map:woodMap, bumpMap:woodMap,
+  bumpScale:0.55, roughness:0.68, clearcoat:0.12, clearcoatRoughness:0.7});
+const woodEdge = new THREE.MeshPhysicalMaterial({map:woodTexture(512,1), roughness:0.62});
+{
+  const TW=1250, TD=780, TT=28;
+  const top = new THREE.Mesh(new THREE.BoxGeometry(TW,TT,TD),
+    [woodEdge,woodEdge,woodMat,woodEdge,woodEdge,woodEdge]);
+  window.__tableTop = top;
+  top.position.y = TABLE_TOP-TT/2; top.castShadow=true; top.receiveShadow=true;
+  scene.add(top);
+  for (const [w,d,px,pz] of [[TW-90,26,0,TD/2-40],[TW-90,26,0,-TD/2+40],
+                             [26,TD-90,TW/2-40,0],[26,TD-90,-TW/2+40,0]]){
+    const ap = new THREE.Mesh(new THREE.BoxGeometry(w,60,d), woodEdge);
+    ap.position.set(px, TABLE_TOP-TT-30, pz);
+    ap.castShadow=true; ap.receiveShadow=true; scene.add(ap);
+  }
+  const legH = TABLE_TOP-TT-FLOOR_Y;
+  for (const sx of [-1,1]) for (const sz of [-1,1]){
+    const leg = new THREE.Mesh(new THREE.BoxGeometry(62,legH,62), woodEdge);
+    leg.position.set(sx*(TW/2-55), TABLE_TOP-TT-legH/2, sz*(TD/2-55));
+    leg.castShadow=true; leg.receiveShadow=true; scene.add(leg);
+  }
+  const RW=3000, RD=3200, RH=2500;
+  const [wc,wx] = noiseCanvas(512,'#d3cbbd');
+  const g3 = wx.createLinearGradient(0,0,0,512);
+  g3.addColorStop(0,'rgba(255,255,255,0.16)');
+  g3.addColorStop(0.7,'rgba(0,0,0,0)');
+  g3.addColorStop(1,'rgba(0,0,0,0.16)');
+  wx.fillStyle=g3; wx.fillRect(0,0,512,512);
+  for (let i=0;i<16000;i++){
+    wx.fillStyle='rgba(0,0,0,'+(Math.random()*0.05)+')';
+    wx.fillRect(Math.random()*512, Math.random()*512, 2, 2);
+  }
+  const wallTex = new THREE.CanvasTexture(wc); wallTex.colorSpace = THREE.SRGBColorSpace;
+  const room = new THREE.Mesh(new THREE.BoxGeometry(RW,RH,RD),
+    new THREE.MeshStandardMaterial({map:wallTex, roughness:0.97, side:THREE.BackSide}));
+  room.position.set(0, FLOOR_Y+RH/2, 0); room.receiveShadow = true; scene.add(room);
+  window.__room = room;
+  const [fc,fx] = noiseCanvas(512,'#6b6157');
+  for (let i=0;i<9000;i++){
+    fx.fillStyle='rgba(0,0,0,'+(Math.random()*0.10)+')';
+    fx.fillRect(Math.random()*512, Math.random()*512, 2, 2);
+  }
+  const ft = new THREE.CanvasTexture(fc); ft.colorSpace = THREE.SRGBColorSpace;
+  ft.wrapS=ft.wrapT=THREE.RepeatWrapping; ft.repeat.set(8,8);
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(RW,RD),
+    new THREE.MeshStandardMaterial({map:ft, roughness:0.95}));
+  floor.rotation.x = -Math.PI/2; floor.position.y = FLOOR_Y+0.5;
+  floor.receiveShadow = true; scene.add(floor);
+  const WW=1100, WH2=1500, WZ=RD/2-6;
+  const pane = new THREE.Mesh(new THREE.PlaneGeometry(WW,WH2),
+    new THREE.MeshBasicMaterial({color:0xf2f6ff}));
+  pane.position.set(360, FLOOR_Y+1250, WZ); pane.rotation.y = Math.PI; scene.add(pane);
+  const win = new THREE.RectAreaLight(0xeaf2ff, 2.6, WW, WH2);
+  win.position.set(360, FLOOR_Y+1250, WZ-20); win.lookAt(0,TABLE_TOP,0); scene.add(win);
+  window.__win = win; window.__pane = pane;
+  const ceil = new THREE.RectAreaLight(0xffe6c4, 1.5, 900, 900);
+  ceil.position.set(-200, FLOOR_Y+RH-60, -200); ceil.lookAt(0,TABLE_TOP,0); scene.add(ceil);
+}
+const key = new THREE.DirectionalLight(0xfff3e4, 3.3);
+key.position.set(360, 520, 640);
+key.castShadow = true;
+key.shadow.mapSize.set(2048,2048);
+key.shadow.bias = -0.0006; key.shadow.normalBias = 0.25; key.shadow.radius = 3;
+scene.add(key); scene.add(key.target);
+const fill = new THREE.DirectionalLight(0xc9dcff, 0.30);
+fill.position.set(-420, 260, -260); scene.add(fill);
+const rim = new THREE.DirectionalLight(0xffffff, 0.55);
+rim.position.set(-260, 180, 420); scene.add(rim);
+scene.add(new THREE.HemisphereLight(0xdfe6f2, 0x50463c, 0.5));
+
+// ---- bench props (no glue bottle) ----
+function grit(){
+  const c = document.createElement('canvas'); c.width=c.height=256;
+  const x = c.getContext('2d'); x.fillStyle='#5d5348'; x.fillRect(0,0,256,256);
+  for (let i=0;i<24000;i++){
+    x.fillStyle='rgba('+(30+Math.random()*90|0)+','+(24+Math.random()*70|0)+
+                ','+(18+Math.random()*50|0)+','+(0.25+Math.random()*0.5)+')';
+    x.fillRect(Math.random()*256, Math.random()*256, 1.6, 1.6);
+  }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+function paperTex(){
+  const c = document.createElement('canvas'); c.width=c.height=512;
+  const x = c.getContext('2d');
+  x.fillStyle='#f4f2ec'; x.fillRect(0,0,512,512);
+  x.fillStyle='#20222a'; x.font='bold 26px system-ui'; x.fillText('2025 F1 Car',40,70);
+  x.font='17px system-ui'; x.fillStyle='#4b5060';
+  x.fillText('Assembly Instructions v1.1',40,100);
+  x.strokeStyle='#c9ccd4'; x.lineWidth=2;
+  for (let i=0;i<9;i++){
+    const y=150+i*32, w=240+Math.random()*180;
+    x.beginPath(); x.moveTo(40,y); x.lineTo(40+w,y); x.stroke();
+  }
+  x.strokeStyle='#9aa0ae'; x.lineWidth=3; x.strokeRect(300,300,170,150);
+  x.beginPath(); x.moveTo(320,430); x.lineTo(450,330); x.stroke();
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+function addProp(m, x, z, ry){
+  m.position.x += x; m.position.z += z; if (ry) m.rotation.y += ry;
+  m.traverse(o => { if (o.isMesh){ o.castShadow = true; o.receiveShadow = true; }});
+  scene.add(m); return m;
+}
+{
+  const k = new THREE.Group();
+  const handle = new THREE.Mesh(new THREE.CylinderGeometry(4.6,4.0,92,14),
+    new THREE.MeshPhysicalMaterial({color:0x9aa3ad, roughness:0.3, metalness:0.85}));
+  handle.rotation.z = Math.PI/2; handle.position.y = 4.6; k.add(handle);
+  const blade = new THREE.Mesh(new THREE.BoxGeometry(34,1.0,9),
+    new THREE.MeshPhysicalMaterial({color:0xd9dee5, roughness:0.12, metalness:1.0}));
+  blade.position.set(60,4.6,0); blade.rotation.z = 0.06; k.add(blade);
+  addProp(k, -125, 248, -0.35);
+
+  const tw = new THREE.Group();
+  for (const s of [-1,1]){
+    const arm = new THREE.Mesh(new THREE.BoxGeometry(96,1.6,3.4),
+      new THREE.MeshPhysicalMaterial({color:0xb9c0c8, roughness:0.25, metalness:0.9}));
+    arm.position.set(0,1.9,s*2.6); arm.rotation.y = s*0.035; tw.add(arm);
+  }
+  addProp(tw, 120, 238, 0.9);
+
+  const sp = new THREE.Mesh(new THREE.BoxGeometry(70,3,48),
+    new THREE.MeshStandardMaterial({map:grit(), roughness:0.98}));
+  sp.position.y = 1.5; addProp(sp, -245, 200, 0.25);
+
+  const tray = new THREE.Group();
+  const trayMat = new THREE.MeshPhysicalMaterial({color:0x2a2d33, roughness:0.55, clearcoat:0.3});
+  const base = new THREE.Mesh(new THREE.BoxGeometry(120,5,90), trayMat);
+  base.position.y = 2.5; tray.add(base);
+  for (const [w,d,px,pz] of [[120,5,0,45],[120,5,0,-45],[5,90,60,0],[5,90,-60,0]]){
+    const wall = new THREE.Mesh(new THREE.BoxGeometry(w,16,d), trayMat);
+    wall.position.set(px,10,pz); tray.add(wall);
+  }
+  const scrapMat = new THREE.MeshPhysicalMaterial({color:0x2c2f34, roughness:0.55, clearcoat:0.4});
+  for (let i=0;i<9;i++){
+    const sc = new THREE.Mesh(new THREE.BoxGeometry(4+Math.random()*16,2.4,3+Math.random()*9), scrapMat);
+    sc.position.set((Math.random()-0.5)*95, 6.5, (Math.random()-0.5)*66);
+    sc.rotation.y = Math.random()*3; tray.add(sc);
+  }
+  addProp(tray, -300, -215, -0.2);
+
+  const sheet = new THREE.Mesh(new THREE.BoxGeometry(210,0.6,297),
+    new THREE.MeshStandardMaterial({map:paperTex(), color:0xcfccc3, roughness:0.9}));
+  sheet.position.y = 0.3; addProp(sheet, 300, -190, -0.28);
+
+  const mug = new THREE.Group();
+  const mugMat = new THREE.MeshPhysicalMaterial({color:0xe8e4dc, roughness:0.25,
+    clearcoat:0.85, clearcoatRoughness:0.1});
+  const cup = new THREE.Mesh(new THREE.CylinderGeometry(41,36,92,28,1,true), mugMat);
+  cup.position.y = 46; mug.add(cup);
+  const bot = new THREE.Mesh(new THREE.CylinderGeometry(36,36,4,28), mugMat);
+  bot.position.y = 2; mug.add(bot);
+  const cof = new THREE.Mesh(new THREE.CircleGeometry(38,28),
+    new THREE.MeshPhysicalMaterial({color:0x2a1a10, roughness:0.15, clearcoat:1}));
+  cof.rotation.x = -Math.PI/2; cof.position.y = 74; mug.add(cof);
+  const hand = new THREE.Mesh(new THREE.TorusGeometry(24,6,12,28,Math.PI*1.2), mugMat);
+  hand.position.set(44,50,0); hand.rotation.z = -0.4; mug.add(hand);
+  addProp(mug, 400, 210, 0);
+
+  const scrap = new THREE.Group();
+  const sM = new THREE.MeshPhysicalMaterial({color:0x2c2f34, roughness:0.55, clearcoat:0.4});
+  for (let i=0;i<7;i++){
+    const b = new THREE.Mesh(new THREE.BoxGeometry(3+Math.random()*12,2,2+Math.random()*7), sM);
+    b.position.set((Math.random()-0.5)*260, 1, 150+Math.random()*120);
+    b.rotation.y = Math.random()*3; scrap.add(b);
+  }
+  addProp(scrap, 0, 0, 0);
+}
+
+// ---------------- the car ----------------
+const FINISH = {
+  matte: {roughness:0.72, metalness:0.02, clearcoat:0.10, cr:0.6},
+  satin: {roughness:0.52, metalness:0.03, clearcoat:0.45, cr:0.35},
+  gloss: {roughness:0.28, metalness:0.05, clearcoat:0.9,  cr:0.08},
+  metal: {roughness:0.30, metalness:0.75, clearcoat:0.5,  cr:0.2},
+};
+let PAL = {body:'#2c2f34', accent:'#2c2f34', hub:'#40444b', tyre:'#131316',
+           wood:'#6d4a2e', finish:'satin'};
+function partMaterial(group, name){
+  const f = FINISH[PAL.finish] || FINISH.satin;
+  if (group === 'tyre')
+    return new THREE.MeshPhysicalMaterial({color:new THREE.Color(PAL.tyre),
+      roughness:0.95, sheen:0.35, sheenRoughness:0.9, sheenColor:0x2a2a30});
+  if (group === 'hub')
+    return new THREE.MeshPhysicalMaterial({color:new THREE.Color(PAL.hub),
+      roughness:0.38, metalness:0.55, clearcoat:0.25});
+  // wings, nose and fin wear the accent colour
+  const isAccent = /Front Body|Rear Stabiliser Fin|Mini-Wing|Halo/.test(name||'');
+  return new THREE.MeshPhysicalMaterial({
+    color: new THREE.Color(isAccent ? PAL.accent : PAL.body),
+    roughness: f.roughness, metalness: f.metalness,
+    clearcoat: f.clearcoat, clearcoatRoughness: f.cr});
+}
+function applyPalette(p){
+  PAL = Object.assign({}, PAL, p);
+  for (const n of names){
+    const m = nodes[n] && nodes[n].g.children[0];
+    if (m) m.material = partMaterial(PARTS[n].group, n);
+  }
+  woodMat.color = new THREE.Color(PAL.wood);
+  woodEdge.color = new THREE.Color(PAL.wood).multiplyScalar(0.85);
+}
+const carGroup = new THREE.Group(); scene.add(carGroup);
+const loader = new STLLoader();
+const geoCache = {}, nodes = {};
+let loaded = 0;
+for (const n of names){
+  const p = PARTS[n];
+  const url = p.file.startsWith('f1_manual/') ? p.file.slice(10) : '../'+p.file;
+  if (!geoCache[url]){
+    const g = await loader.loadAsync(encodeURI(url));
+    g.computeBoundingBox();
+    const c = g.boundingBox.getCenter(new THREE.Vector3());
+    g.translate(-c.x,-c.y,-c.z); g.computeVertexNormals();
+    geoCache[url] = g;
+  }
+  const m = p.matrix;
+  const M = new THREE.Matrix4();
+  M.set(m[0][0],m[0][1],m[0][2],0, m[1][0],m[1][1],m[1][2],0,
+        m[2][0],m[2][1],m[2][2],0, 0,0,0,1);
+  const mesh = new THREE.Mesh(geoCache[url].clone(), partMaterial(p.group, n));
+  mesh.castShadow = true; mesh.receiveShadow = true;
+  mesh.applyMatrix4(M);
+  const g = new THREE.Group(); g.add(mesh); carGroup.add(g);
+  nodes[n] = {g, pos:p.pos};
+  hud.textContent = 'loading '+(++loaded)+'/'+names.length;
+}
+
+// ---------------- post processing ----------------
+const composer = new EffectComposer(renderer);
+composer.setSize(W, H);
+composer.addPass(new RenderPass(scene, cam));
+const bloom = new UnrealBloomPass(new THREE.Vector2(W,H), 0.16, 0.7, 0.92);
+composer.addPass(bloom);
+const bokeh = new BokehPass(scene, cam, {focus: 400, aperture: 0.00022, maxblur: 0.006});
+composer.addPass(bokeh);
+const GradeShader = {
+  uniforms: {tDiffuse:{value:null}, uTime:{value:0}, uVig:{value:0.34},
+             uGrain:{value:0.045}, uWarm:{value:0.05}},
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+  fragmentShader: `
+    uniform sampler2D tDiffuse; uniform float uTime,uVig,uGrain,uWarm;
+    varying vec2 vUv;
+    float hash(vec2 p){ return fract(sin(dot(p,vec2(41.3,289.1)))*43758.5453); }
+    void main(){
+      vec3 c = texture2D(tDiffuse, vUv).rgb;
+      // gentle film curve + warm highlights, cool shadows
+      c = pow(c, vec3(0.98, 1.0, 1.03));
+      c.r += uWarm * c.r * (1.0 - c.b);
+      c.b += 0.03 * (1.0 - c.b) * (1.0 - c.r);
+      // slight chromatic aberration toward the corners
+      vec2 d = vUv - 0.5;
+      float r2 = dot(d,d);
+      c.r = texture2D(tDiffuse, vUv + d*0.0018*r2).r;
+      c.b = texture2D(tDiffuse, vUv - d*0.0018*r2).b;
+      // vignette
+      c *= 1.0 - uVig * smoothstep(0.15, 0.85, r2*2.2);
+      // grain
+      float g = hash(vUv*vec2(1024.0,768.0) + uTime) - 0.5;
+      c += g * uGrain;
+      gl_FragColor = vec4(c, 1.0);
+    }`
+};
+const grade = new ShaderPass(GradeShader);
+composer.addPass(grade);
+composer.addPass(new OutputPass());
+
+// ---------------- timeline ----------------
+// build stages: everything that adds parts, in manual order
+const stages = [];
+for (const st of man.steps){
+  if (st.layout || !st.new || !st.new.length) continue;
+  stages.push(st);
+}
+const HOLD = Math.max(6, Math.floor(NFRAMES * 0.62 / stages.length));
+const BUILD_FRAMES = HOLD * stages.length;
+const ease = t => t<0 ? 0 : t>1 ? 1 : 1-Math.pow(1-t,3);
+
+function outboardGuard(n, d){
+  if (!/Tyre|Wheel Hub|Inner Hub|Axle/.test(n)) return d;
+  if (Math.abs(d[2]) <= Math.max(Math.abs(d[0]), Math.abs(d[1]))) return d;
+  const z = PARTS[n].pos[2];
+  return [0, 0, (Math.abs(z) > 8 ? z : 1) >= 0 ? 1 : -1];
+}
+function flyDir(n, joint){
+  if (joint) return joint;
+  const p = PARTS[n].pos;
+  if (/Tyre|Wheel Hub|Inner Hub|Axle/.test(n)) return [0,0,Math.sign(p[2]||1)];
+  if (/Pin|Back Body/.test(n)) return [-1,0.15,0];
+  if (/Front Body|Mini-Wing/.test(n)) return [1,0.15,0];
+  if (/Suspension/.test(n)) return [-0.8,0.1,0.5*Math.sign(p[2]||1)];
+  return [0,1,0];
+}
+const jointAxis = {};
+for (const st of stages)
+  for (const k of (st.joints||[])){
+    const j = GLUE[k]; if (!j) continue;
+    const p = j.patches[0];
+    jointAxis[j.a] = p.insert || p.normal;
+  }
+
+function setFrame(f){
+  const t = f / NFRAMES;
+  // which stage, and how far into it
+  const sIdx = Math.min(stages.length-1, Math.floor(f / HOLD));
+  const local = (f - sIdx*HOLD) / HOLD;
+  const done = f >= BUILD_FRAMES;
+
+  const shown = new Set();
+  for (let k=0; k<=sIdx; k++) stages[k].new.forEach(n=>shown.add(n));
+  if (done) names.forEach(n=>shown.add(n));
+
+  let lo = 1e9;
+  for (const n of names){
+    const nd = nodes[n];
+    nd.g.visible = shown.has(n);
+    nd.g.position.set(...nd.pos);
+    if (nd.g.visible) lo = Math.min(lo, nd.pos[1] - PARTS[n].dims[1]/2);
+  }
+  // the parts of this stage travel in along their real mating axis
+  if (!done){
+    const k = ease((local - 0.05) / 0.55);
+    for (const n of stages[sIdx].new){
+      const d = outboardGuard(n, flyDir(n, jointAxis[n]));
+      const span = 62 * (1 - k);
+      const p = nodes[n].pos;
+      nodes[n].g.position.set(p[0]+d[0]*span, p[1]+d[1]*span, p[2]+d[2]*span);
+    }
+  }
+  carGroup.position.y = (lo < 1e8) ? (TABLE_TOP - lo + 0.4) : 0;
+
+  // camera: slow arc that tightens as the car comes together
+  const az = 24 + 300*t;
+  const el = 15 + 11*Math.sin(t*Math.PI);
+  const zoom = 1.28 - 0.30*Math.sin(Math.min(1,t*1.15)*Math.PI*0.5);
+  const target = new THREE.Vector3(0, carGroup.position.y + 4, 0);
+  const r = 335 * zoom;
+  const a = az*Math.PI/180, e = el*Math.PI/180;
+  cam.position.set(target.x + r*Math.cos(e)*Math.sin(a),
+                   target.y + r*Math.sin(e),
+                   target.z + r*Math.cos(e)*Math.cos(a));
+  cam.lookAt(target);
+  key.target.position.copy(target);
+  key.position.set(target.x+300, target.y+520, target.z+560);
+  const sc = key.shadow.camera;
+  sc.left=-260; sc.right=260; sc.top=260; sc.bottom=-260;
+  sc.near=1; sc.far=1600; sc.updateProjectionMatrix();
+  // keep focus on the car, open up the aperture for the hero pass
+  bokeh.uniforms['focus'].value = cam.position.distanceTo(target);
+  bokeh.uniforms['aperture'].value = done ? 0.00045 : 0.00022;
+  grade.uniforms.uTime.value = f * 0.37;
+}
+
+// ---- deterministic randomisation of bench, room, light and layout ----
+function mulberry32(a){
+  return function(){ a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+}
+const PAINTED = new THREE.MeshPhysicalMaterial({color:0x8d8d88, roughness:0.55,
+  clearcoat:0.35, clearcoatRoughness:0.4});
+const WALLS = ['#d3cbbd','#c9cdc6','#cdd4dc','#d8cfc6','#bfc4bd','#e0dbd2'];
+function randomiseScene(rng, pal){
+  // bench: real wood in a shifted tone, or a painted desk
+  const painted = rng() < 0.28;
+  const top = window.__tableTop;
+  if (painted){
+    PAINTED.color = new THREE.Color().setHSL(rng(), 0.05 + rng()*0.12,
+                                             0.24 + rng()*0.5);
+    top.material = [PAINTED,PAINTED,PAINTED,PAINTED,PAINTED,PAINTED];
+  } else {
+    const c = new THREE.Color(pal.wood);
+    const hsl = {}; c.getHSL(hsl);
+    woodMat.color = new THREE.Color().setHSL(
+      (hsl.h + (rng()-0.5)*0.04 + 1) % 1,
+      Math.min(0.9, hsl.s * (0.7 + rng()*0.7)),
+      Math.min(0.8, hsl.l * (0.75 + rng()*0.7)));
+    woodEdge.color = woodMat.color.clone().multiplyScalar(0.85);
+    woodMat.roughness = 0.45 + rng()*0.35;
+    top.material = [woodEdge,woodEdge,woodMat,woodEdge,woodEdge,woodEdge];
+  }
+  // wall
+  window.__room.material.color = new THREE.Color(
+    WALLS[(rng()*WALLS.length)|0]).multiplyScalar(0.85 + rng()*0.3);
+  // light: window strength and warmth, key direction, exposure
+  const warm = rng();
+  window.__win.intensity = 2.1 + rng()*1.6;
+  window.__win.color = new THREE.Color().setHSL(0.55 - warm*0.45, 0.12 + rng()*0.1,
+                                                0.62 + rng()*0.1);
+  window.__pane.material.color = window.__win.color.clone().lerp(
+    new THREE.Color(0xffffff), 0.6);
+  key.intensity = 2.4 + rng()*1.6;
+  key.color = new THREE.Color().setHSL(0.09 - warm*0.05, 0.10 + rng()*0.12, 0.62);
+  const ka = (rng()*2 - 1) * 0.9;
+  key.position.set(Math.sin(ka)*640, 380 + rng()*320, Math.cos(ka)*640);
+  renderer.toneMappingExposure = 0.97 + rng()*0.22;
+  grade.uniforms.uGrain.value = 0.028 + rng()*0.035;
+  grade.uniforms.uVig.value = 0.22 + rng()*0.22;
+}
+// scatter the not-yet-fitted parts the way they really end up on a bench
+function scatterLoose(pending, rng, keepOut){
+  const placed = [];
+  for (const n of pending){
+    const d = PARTS[n].dims;
+    const rad = Math.max(d[0], d[2]) * 0.55 + 10;
+    let px = 0, pz = 0, ok = false;
+    for (let tries=0; tries<80 && !ok; tries++){
+      px = (rng()*2 - 1) * 195;
+      pz = 45 + rng() * 165;
+      ok = !(px > keepOut.x0-rad && px < keepOut.x1+rad &&
+             pz > keepOut.z0-rad && pz < keepOut.z1+rad);
+      for (const q of placed)
+        if (ok && Math.hypot(q.x-px, q.z-pz) < q.r + rad) ok = false;
+    }
+    placed.push({x:px, z:pz, r:rad});
+    const nd = nodes[n];
+    nd.g.visible = true;
+    nd.g.rotation.y = rng() * Math.PI * 2;
+    nd.g.position.set(px, d[1]/2 - carGroup.position.y, pz);
+  }
+}
+
+// ---- batch mode: ?batch=1 renders every palette in every state ----
+const BATCH = Q.get('batch') === '1';
+if (BATCH){
+  const cfg = await (await fetch('palettes.json')).json();
+  const POSES = {           // az, el (distance is fitted to what is on the bench)
+    loose:   [28, 44],
+    body:    [32, 38],
+    rolling: [34, 34],
+  };
+  // parts that are not yet fitted lie loose on the bench beside the build
+  function looseLayout(pending){
+    const sorted = [...pending].sort((a,b)=>
+      Math.max(...PARTS[b].dims) - Math.max(...PARTS[a].dims));
+    let gx = -200, gz = 120, rowH = 0;
+    for (const n of sorted){
+      const [dx,dy,dz] = PARTS[n].dims;
+      const w = Math.max(dx,26) + 18;
+      if (gx + w > 200){ gx = -200; gz += rowH + 22; rowH = 0; }
+      nodes[n].g.visible = true;
+      nodes[n].g.position.set(gx + w/2, dy/2 - carGroup.position.y,
+                              gz + Math.max(dz,26)/2);
+      gx += w; rowH = Math.max(rowH, Math.max(dz,26));
+    }
+  }
+  const VARIANTS = parseInt(Q.get('variants') || '2');
+  function setStage(upto){
+    const fitted = new Set();
+    if (upto >= 0)
+      for (let k=0; k<=upto; k++)
+        (man.steps[k].new || []).forEach(n => { if (!man.steps[k].layout) fitted.add(n); });
+    let lo = 1e9;
+    carGroup.rotation.y = 0; carGroup.position.set(0, 0, 0);
+    for (const n of names){
+      const nd = nodes[n];
+      nd.g.visible = fitted.has(n);
+      nd.g.rotation.y = 0;
+      nd.g.position.set(...nd.pos);
+      if (nd.g.visible) lo = Math.min(lo, nd.pos[1] - PARTS[n].dims[1]/2);
+    }
+    carGroup.position.y = (lo < 1e8) ? (TABLE_TOP - lo + 0.4) : 0.4;
+    return names.filter(n => !fitted.has(n));
+  }
+  let done = 0;
+  const TOTAL = cfg.palettes.length * cfg.states.length * VARIANTS;
+  for (const pal of cfg.palettes){
+    applyPalette(pal);
+    for (const st of cfg.states){
+     for (let v=0; v<VARIANTS; v++){
+      const rng = mulberry32(pal.id.length*7919 + st.id.length*104729 + v*7717
+                             + pal.name.charCodeAt(0)*131 + st.id.charCodeAt(0));
+      randomiseScene(rng, pal);
+      const pending = setStage(st.upto);
+      // the build itself sits wherever it was left, at a random angle
+      carGroup.rotation.y = (rng()*2 - 1) * 0.5;
+      carGroup.position.x = (rng()*2 - 1) * 60;
+      carGroup.position.z = (rng()*2 - 1) * 45;
+      const half = st.upto < 0 ? 0 : 150;
+      scatterLoose(pending, rng, {x0:carGroup.position.x-half,
+                                  x1:carGroup.position.x+half,
+                                  z0:carGroup.position.z-70,
+                                  z1:carGroup.position.z+70});
+      const [azB, elB] = POSES[st.id];
+      const az = azB + (rng()*2 - 1) * 150;
+      const el = Math.max(30, Math.min(58, elB + (rng()*2 - 1) * 12));
+      // frame everything actually on the bench, assembly plus loose parts
+      const bb = new THREE.Box3();
+      for (const n of names){
+        if (!nodes[n].g.visible) continue;
+        const p = nodes[n].g.position, d = PARTS[n].dims;
+        bb.expandByPoint(new THREE.Vector3(p.x-d[0]/2, 0, p.z-d[2]/2));
+        bb.expandByPoint(new THREE.Vector3(p.x+d[0]/2, d[1], p.z+d[2]/2));
+      }
+      const c0 = bb.getCenter(new THREE.Vector3());
+      const size = bb.getSize(new THREE.Vector3());
+      const target = new THREE.Vector3(c0.x, carGroup.position.y + 6, c0.z);
+      const fov = cam.fov * Math.PI/180;
+      const span = Math.max(size.x, size.z * 1.25, 120);
+      const r = (span * 0.5) / Math.tan(fov * 0.5) * (1.02 + rng()*0.2);
+      const a = az*Math.PI/180, e = el*Math.PI/180;
+      cam.position.set(target.x + r*Math.cos(e)*Math.sin(a),
+                       target.y + r*Math.sin(e),
+                       target.z + r*Math.cos(e)*Math.cos(a));
+      cam.lookAt(target);
+      key.target.position.copy(target);
+      key.position.set(target.x+300, target.y+520, target.z+560);
+      bokeh.uniforms['focus'].value = cam.position.distanceTo(target);
+      bokeh.uniforms['aperture'].value = 0.00016;
+      grade.uniforms.uTime.value = 7.0;
+      composer.render();
+      const blob = await new Promise(r2 => canvas.toBlob(r2, 'image/png'));
+      await fetch('/frame?name=' + pal.id + '_' + st.id + '_v' + v,
+                  {method:'POST', body:blob});
+      hud.textContent = 'rendered ' + (++done) + '/' + TOTAL;
+     }
+    }
+  }
+  hud.textContent = 'BATCH DONE';
+  document.title = 'BATCH DONE';
+}
+// ---- still mode: ?still=az,el,zoom[,grid] ----
+const STILL = BATCH ? null : Q.get('still');
+if (STILL){
+  const [az, el, zoom, layout] = STILL.split(',');
+  if (layout === 'grid'){
+    const sorted = [...names].sort((a,b)=>
+      Math.max(...PARTS[b].dims) - Math.max(...PARTS[a].dims));
+    let gx = -210, gz = -150, rowH = 0;
+    for (const n of sorted){
+      const [dx,dy,dz] = PARTS[n].dims;
+      const w = Math.max(dx,26) + 26;
+      if (gx + w > 210){ gx = -210; gz += rowH + 32; rowH = 0; }
+      nodes[n].g.visible = true;
+      nodes[n].g.position.set(gx + w/2, dy/2, gz + Math.max(dz,26)/2);
+      gx += w; rowH = Math.max(rowH, Math.max(dz,26));
+    }
+    carGroup.position.y = 0.4;
+  } else {
+    setFrame(NFRAMES);
+  }
+  const target = new THREE.Vector3(0, carGroup.position.y + 4, 0);
+  const r = 335 * parseFloat(zoom), a = parseFloat(az)*Math.PI/180,
+        e = parseFloat(el)*Math.PI/180;
+  cam.position.set(target.x + r*Math.cos(e)*Math.sin(a),
+                   target.y + r*Math.sin(e),
+                   target.z + r*Math.cos(e)*Math.cos(a));
+  cam.lookAt(target);
+  key.target.position.copy(target);
+  key.position.set(target.x+300, target.y+520, target.z+560);
+  bokeh.uniforms['focus'].value = cam.position.distanceTo(target);
+  bokeh.uniforms['aperture'].value = 0.00040;
+  grade.uniforms.uTime.value = 11.0;
+  composer.render();
+  const blob = await new Promise(r2 => canvas.toBlob(r2, 'image/png'));
+  await fetch('/frame?i=' + (Q.get('idx') || 0), {method:'POST', body:blob});
+  hud.textContent = 'STILL DONE';
+  document.title = 'STILL DONE';
+} else if (!CAPTURE){
+  let f = 0;
+  (function loop(){
+    setFrame(f % NFRAMES); f++;
+    composer.render();
+    hud.textContent = 'frame '+(f%NFRAMES)+'/'+NFRAMES;
+    requestAnimationFrame(loop);
+  })();
+} else {
+  hud.textContent = 'capturing…';
+  for (let f=0; f<NFRAMES; f++){
+    setFrame(f);
+    composer.render();
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+    await fetch('/frame?i='+f, {method:'POST', body:blob});
+    hud.textContent = 'captured '+(f+1)+'/'+NFRAMES;
+  }
+  hud.textContent = 'CAPTURE DONE';
+  document.title = 'CAPTURE DONE';
+}
+</script></body></html>

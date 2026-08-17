@@ -30,3 +30,9 @@ logs/runs/*/stderr.log
 !logs/runs/.gitkeep
 !logs/raw/.gitkeep
 !outputs/.gitkeep
+
+# F1 assembly: captured data, checkpoints and heavy source assets
+f1_assembly/**/traindata/
+f1_assembly/**/frames/
+f1_assembly/**/*.stl
+f1_assembly/**/memory_cn*/

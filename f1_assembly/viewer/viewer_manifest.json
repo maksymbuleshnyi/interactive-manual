@@ -1,0 +1,6838 @@
+{
+ "parts": {
+  "Mid Body": {
+   "file": "Separate STLs/Mid Body.stl",
+   "matrix": [
+    [
+     0.001997,
+     0.000492,
+     0.999998
+    ],
+    [
+     -0.999998,
+     0.000348,
+     0.001996
+    ],
+    [
+     -0.000347,
+     -1.0,
+     0.000493
+    ]
+   ],
+   "pos": [
+    -15.38,
+    -0.28,
+    0.01
+   ],
+   "dims": [
+    140.3,
+    48.8,
+    73.0
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 6,
+   "qty": 1,
+   "role": "Central monocoque: floor, sidepods, cockpit and airbox. Everything else references this part.",
+   "bias": [
+    -7.46,
+    -7.71,
+    -0.02
+   ]
+  },
+  "Front Body": {
+   "file": "Separate STLs/Front Body.stl",
+   "matrix": [
+    [
+     -8e-05,
+     0.000312,
+     1.0
+    ],
+    [
+     1.0,
+     -0.000325,
+     8e-05
+    ],
+    [
+     0.000325,
+     1.0,
+     -0.000312
+    ]
+   ],
+   "pos": [
+    86.18,
+    -6.63,
+    0.04
+   ],
+   "dims": [
+    84.9,
+    31.6,
+    93.0
+   ],
+   "proxy": "box",
+   "group": "accent",
+   "id": 1,
+   "qty": 1,
+   "role": "Nose cone and the complete front wing, moulded as one piece. The square socket in its rear face receives the Mid Body locator.",
+   "bias": [
+    2.75,
+    -4.32,
+    0.14
+   ]
+  },
+  "Halo": {
+   "file": "Separate STLs/Halo.stl",
+   "matrix": [
+    [
+     0.001599,
+     0.999977,
+     -0.006583
+    ],
+    [
+     0.000482,
+     0.006582,
+     0.999978
+    ],
+    [
+     0.999999,
+     -0.001602,
+     -0.000472
+    ]
+   ],
+   "pos": [
+    -0.53,
+    12.77,
+    0.0
+   ],
+   "dims": [
+    62.3,
+    11.8,
+    31.6
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 2,
+   "qty": 1,
+   "role": "Cockpit safety hoop. Two rear posts and one front pillar drop into three slots around the cockpit opening.",
+   "bias": [
+    -2.61,
+    0.41,
+    0.31
+   ]
+  },
+  "Back Body": {
+   "file": "Separate STLs/Back Body.stl",
+   "matrix": [
+    [
+     0.0,
+     7e-06,
+     -1.0
+    ],
+    [
+     1.0,
+     6.6e-05,
+     0.0
+    ],
+    [
+     6.6e-05,
+     -1.0,
+     -7e-06
+    ]
+   ],
+   "pos": [
+    -107.54,
+    0.19,
+    0.0
+   ],
+   "dims": [
+    46.3,
+    48.4,
+    63.1
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 5,
+   "qty": 1,
+   "role": "Gearbox, diffuser and rear wing. Locates on three pins and glues to the rear face of the Mid Body.",
+   "bias": [
+    -0.73,
+    5.17,
+    -0.01
+   ]
+  },
+  "Left Rear Suspension": {
+   "file": "Separate STLs/Left Rear Suspension.stl",
+   "matrix": [
+    [
+     0.002417,
+     0.999997,
+     0.0
+    ],
+    [
+     -0.999997,
+     0.002417,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    -88.23,
+    -10.85,
+    -15.54
+   ],
+   "dims": [
+    31.1,
+    18.2,
+    17.6
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 7,
+   "qty": 1,
+   "role": "Left rear wishbone set. Three rods on a flat inboard plate that sits in a recess on the Back Body.",
+   "bias": [
+    -3.16,
+    0.43,
+    -1.35
+   ]
+  },
+  "Right Rear Suspension": {
+   "file": "Separate STLs/Right Rear Suspension.stl",
+   "matrix": [
+    [
+     -0.023512,
+     -0.999724,
+     0.0
+    ],
+    [
+     -0.999724,
+     0.023512,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    -88.13,
+    -11.19,
+    15.54
+   ],
+   "dims": [
+    31.2,
+    18.5,
+    17.6
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 8,
+   "qty": 1,
+   "role": "Right rear wishbone set, mirror of the left.",
+   "bias": [
+    -3.14,
+    0.5,
+    1.36
+   ]
+  },
+  "Rear Stabiliser Fin": {
+   "file": "Separate STLs/Rear Stabiliser Fin.stl",
+   "matrix": [
+    [
+     0.364895,
+     0.931048,
+     0.0
+    ],
+    [
+     -0.931048,
+     0.364895,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    -81.02,
+    12.41,
+    0.7
+   ],
+   "dims": [
+    21.0,
+    9.8,
+    0.7
+   ],
+   "proxy": "box",
+   "group": "accent",
+   "id": 12,
+   "qty": 1,
+   "role": "Thin fin that slots into the engine cover behind the airbox.",
+   "bias": [
+    1.78,
+    0.64,
+    -0.0
+   ]
+  },
+  "Locating Pin 1": {
+   "file": "Separate STLs/Locating Pin 1.stl",
+   "matrix": [
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "pos": [
+    -83.5,
+    -16.92,
+    -11.97
+   ],
+   "dims": [
+    10.2,
+    4.8,
+    4.8
+   ],
+   "proxy": "cylX",
+   "group": "hub",
+   "id": 16,
+   "qty": 3,
+   "role": "Alignment pin, one of three. Dry fit into the rear face of the Mid Body.",
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "Locating Pin 2": {
+   "file": "Separate STLs/Locating Pin 1.stl",
+   "matrix": [
+    [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     -1.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "pos": [
+    -83.5,
+    -16.92,
+    11.97
+   ],
+   "dims": [
+    10.2,
+    4.8,
+    4.8
+   ],
+   "proxy": "cylX",
+   "group": "hub",
+   "id": 16,
+   "qty": 3,
+   "role": "Alignment pin, one of three.",
+   "bias": [
+    -0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "Locating Pin 3": {
+   "file": "Separate STLs/Locating Pin 1.stl",
+   "matrix": [
+    [
+     0.0,
+     0.0,
+     1.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "pos": [
+    -83.5,
+    3.32,
+    0.0
+   ],
+   "dims": [
+    10.2,
+    4.8,
+    4.8
+   ],
+   "proxy": "cylX",
+   "group": "hub",
+   "id": 16,
+   "qty": 3,
+   "role": "Alignment pin, one of three.",
+   "bias": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "Side Camera Mount": {
+   "file": "Separate STLs/Side Camera Mount.stl",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    -30.32,
+    18.48,
+    8.0
+   ],
+   "dims": [
+    6.7,
+    1.8,
+    7.5
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 11,
+   "qty": 2,
+   "role": "Camera pod on the sidepod shoulder, left.",
+   "bias": [
+    1.73,
+    0.09,
+    0.0
+   ]
+  },
+  "Side Camera Mount 2": {
+   "file": "Separate STLs/Side Camera Mount.stl",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    -30.32,
+    18.48,
+    -8.0
+   ],
+   "dims": [
+    6.7,
+    1.8,
+    7.5
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 11,
+   "qty": 2,
+   "role": "Camera pod on the sidepod shoulder, right.",
+   "bias": [
+    1.73,
+    0.09,
+    0.0
+   ]
+  },
+  "Front Wheel Inner Hub A 1": {
+   "file": "Separate STLs/Front Wheel Inner Hub A 1.stl",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.99863,
+     0.052336
+    ],
+    [
+     0.0,
+     -0.052336,
+     0.99863
+    ]
+   ],
+   "pos": [
+    67.4,
+    -11.1,
+    34.7
+   ],
+   "dims": [
+    12.3,
+    21.2,
+    13.7
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 13,
+   "qty": 2,
+   "role": "Front inner hub half A, left. Clamps around the front axle stub together with half B.",
+   "bias": [
+    -0.65,
+    -0.01,
+    -0.1
+   ]
+  },
+  "Front Wheel Inner Hub B 1": {
+   "file": "Separate STLs/Front Wheel Inner Hub B 1.stl",
+   "matrix": [
+    [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -0.99863,
+     0.052335
+    ],
+    [
+     0.0,
+     0.052335,
+     0.99863
+    ]
+   ],
+   "pos": [
+    76.71,
+    -11.1,
+    34.7
+   ],
+   "dims": [
+    10.3,
+    21.2,
+    13.7
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 14,
+   "qty": 2,
+   "role": "Front inner hub half B, left. Glues to half A only, so the pair spins as one collar.",
+   "bias": [
+    -0.25,
+    -0.0,
+    -0.1
+   ]
+  },
+  "Front Wheel Inner Hub A 2": {
+   "file": "Separate STLs/Front Wheel Inner Hub A 2.stl",
+   "matrix": [
+    [
+     1.0,
+     -3e-06,
+     -1e-06
+    ],
+    [
+     -3e-06,
+     -0.99863,
+     0.052335
+    ],
+    [
+     -1e-06,
+     -0.052335,
+     -0.99863
+    ]
+   ],
+   "pos": [
+    67.4,
+    -11.1,
+    -34.7
+   ],
+   "dims": [
+    12.3,
+    21.2,
+    13.7
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 13,
+   "qty": 2,
+   "role": "Front inner hub half A, right.",
+   "bias": [
+    -0.65,
+    -0.01,
+    0.1
+   ]
+  },
+  "Front Wheel Inner Hub B 2": {
+   "file": "Separate STLs/Front Wheel Inner Hub B 2.stl",
+   "matrix": [
+    [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.998629,
+     0.052337
+    ],
+    [
+     0.0,
+     0.052337,
+     -0.998629
+    ]
+   ],
+   "pos": [
+    76.71,
+    -11.1,
+    -34.7
+   ],
+   "dims": [
+    10.3,
+    21.2,
+    13.7
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 14,
+   "qty": 2,
+   "role": "Front inner hub half B, right.",
+   "bias": [
+    -0.25,
+    -0.01,
+    0.1
+   ]
+  },
+  "Rear Axle": {
+   "file": "Separate STLs/Rear Axle.stl",
+   "matrix": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    0.0
+   ],
+   "dims": [
+    5.2,
+    5.2,
+    75.0
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 15,
+   "qty": 1,
+   "role": "75mm shaft. Glued into one rear hub, then threaded through suspension, body and opposite suspension.",
+   "bias": [
+    -0.03,
+    -0.01,
+    0.0
+   ]
+  },
+  "Rear Wheel Hub 1": {
+   "file": "Separate STLs/Rear Wheel Hub 1.stl",
+   "matrix": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    36.35
+   ],
+   "dims": [
+    23.2,
+    23.2,
+    21.9
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 3,
+   "qty": 2,
+   "role": "Rear wheel hub, left. The axle glues into its centre bore; the tyre presses onto its outer rim.",
+   "bias": [
+    0.09,
+    -0.04,
+    8.16
+   ]
+  },
+  "Rear Wheel Hub 2": {
+   "file": "Separate STLs/Rear Wheel Hub 2.stl",
+   "matrix": [
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    -36.35
+   ],
+   "dims": [
+    23.2,
+    23.2,
+    21.9
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 3,
+   "qty": 2,
+   "role": "Rear wheel hub, right. Glued onto the far end of the axle after it is threaded through the body.",
+   "bias": [
+    -0.09,
+    -0.04,
+    -8.16
+   ]
+  },
+  "Rear Tyre L": {
+   "file": "f1_manual/tyre_q0.stl",
+   "matrix": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    36.35
+   ],
+   "dims": [
+    35.6,
+    35.6,
+    21.9
+   ],
+   "proxy": "cylZ",
+   "group": "tyre",
+   "id": 17,
+   "qty": 2,
+   "role": "Rear tyre, left. Interference press fit, no glue, so it stays replaceable.",
+   "bias": [
+    0.0,
+    1.08,
+    0.62
+   ]
+  },
+  "Rear Tyre R": {
+   "file": "f1_manual/tyre_q1.stl",
+   "matrix": [
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    -36.35
+   ],
+   "dims": [
+    35.6,
+    35.6,
+    21.9
+   ],
+   "proxy": "cylZ",
+   "group": "tyre",
+   "id": 17,
+   "qty": 2,
+   "role": "Rear tyre, right.",
+   "bias": [
+    -0.0,
+    1.08,
+    -0.62
+   ]
+  },
+  "Front Wheel Hub 1": {
+   "file": "Separate STLs/Front Wheel Hub 1.stl",
+   "matrix": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    38.65
+   ],
+   "dims": [
+    23.2,
+    23.2,
+    19.3
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 4,
+   "qty": 2,
+   "role": "Front wheel hub, left. Glues onto the outer face of the inner-hub collar, never to the axle stub.",
+   "bias": [
+    0.13,
+    -0.04,
+    6.76
+   ]
+  },
+  "Front Wheel Hub 2": {
+   "file": "Separate STLs/Front Wheel Hub 2.stl",
+   "matrix": [
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    -38.65
+   ],
+   "dims": [
+    23.2,
+    23.2,
+    19.3
+   ],
+   "proxy": "cylZ",
+   "group": "hub",
+   "id": 4,
+   "qty": 2,
+   "role": "Front wheel hub, right.",
+   "bias": [
+    -0.13,
+    -0.04,
+    -6.76
+   ]
+  },
+  "Front Tyre L": {
+   "file": "f1_manual/tyre_q2.stl",
+   "matrix": [
+    [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    38.65
+   ],
+   "dims": [
+    35.6,
+    35.6,
+    19.3
+   ],
+   "proxy": "cylZ",
+   "group": "tyre",
+   "id": 18,
+   "qty": 2,
+   "role": "Front tyre, left. Narrower than the rears.",
+   "bias": [
+    0.0,
+    1.08,
+    0.55
+   ]
+  },
+  "Front Tyre R": {
+   "file": "f1_manual/tyre_q3.stl",
+   "matrix": [
+    [
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    -38.65
+   ],
+   "dims": [
+    35.6,
+    35.6,
+    19.3
+   ],
+   "proxy": "cylZ",
+   "group": "tyre",
+   "id": 18,
+   "qty": 2,
+   "role": "Front tyre, right.",
+   "bias": [
+    -0.0,
+    1.08,
+    -0.55
+   ]
+  },
+  "Front Mini-Wing": {
+   "file": "Separate STLs/Front Mini-Wing.stl",
+   "matrix": [
+    [
+     0.00268,
+     0.999996,
+     -0.0
+    ],
+    [
+     -0.999996,
+     0.00268,
+     -0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "pos": [
+    90.13,
+    -6.12,
+    -0.25
+   ],
+   "dims": [
+    7.6,
+    2.6,
+    24.9
+   ],
+   "proxy": "box",
+   "group": "accent",
+   "id": 10,
+   "qty": 1,
+   "role": "Small winglet that threads through a slot in the nose so both tips protrude equally.",
+   "bias": [
+    0.8,
+    0.0,
+    0.0
+   ]
+  },
+  "Top Camera Mount": {
+   "file": "Separate STLs/Top Camera Mount.stl",
+   "matrix": [
+    [
+     -0.86923,
+     -0.494309,
+     0.009871
+    ],
+    [
+     0.494407,
+     -0.869014,
+     0.019418
+    ],
+    [
+     -0.00102,
+     0.021759,
+     0.999763
+    ]
+   ],
+   "pos": [
+    -26.01,
+    25.34,
+    -0.75
+   ],
+   "dims": [
+    8.4,
+    5.9,
+    8.6
+   ],
+   "proxy": "box",
+   "group": "body",
+   "id": 9,
+   "qty": 1,
+   "role": "Camera pod on top of the airbox.",
+   "bias": [
+    -1.52,
+    2.39,
+    -0.06
+   ]
+  }
+ },
+ "steps": [
+  {
+   "title": "Parts check",
+   "new": [
+    "Mid Body",
+    "Front Body",
+    "Halo",
+    "Back Body",
+    "Left Rear Suspension",
+    "Right Rear Suspension",
+    "Rear Stabiliser Fin",
+    "Locating Pin 1",
+    "Locating Pin 2",
+    "Locating Pin 3",
+    "Side Camera Mount",
+    "Side Camera Mount 2",
+    "Front Wheel Inner Hub A 1",
+    "Front Wheel Inner Hub B 1",
+    "Front Wheel Inner Hub A 2",
+    "Front Wheel Inner Hub B 2",
+    "Rear Axle",
+    "Rear Wheel Hub 1",
+    "Rear Wheel Hub 2",
+    "Rear Tyre L",
+    "Rear Tyre R",
+    "Front Wheel Hub 1",
+    "Front Wheel Hub 2",
+    "Front Tyre L",
+    "Front Tyre R",
+    "Front Mini-Wing",
+    "Top Camera Mount"
+   ],
+   "desc": "All 18 unique parts, laid out as they come off the print bed. Hover any part to see its name, its number in the parts list and what it does. Remove supports and clean the edges before you start.",
+   "joints": [],
+   "fasten": [
+    {
+     "t": "18 unique parts"
+    },
+    {
+     "t": "Hover a part to identify it"
+    }
+   ],
+   "layout": "grid",
+   "label_all": true
+  },
+  {
+   "title": "Locating pins",
+   "new": [
+    "Mid Body",
+    "Locating Pin 1",
+    "Locating Pin 2",
+    "Locating Pin 3"
+   ],
+   "desc": "Push the three Locating Pins into the three holes in the REAR face of the Mid Body. Dry fit, no glue on the pins themselves: they exist to align the Back Body, not to hold it. Press each one until its shoulder is flush with the face.",
+   "joints": [
+    "Locating Pin 1|Mid Body",
+    "Locating Pin 2|Mid Body",
+    "Locating Pin 3|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "3\u00d7 Locating Pin \u2014 dry press fit"
+    },
+    {
+     "t": "No glue on the pins",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Back Body",
+   "new": [
+    "Back Body"
+   ],
+   "desc": "Glue the Back Body onto the rear face of the Mid Body. Spread a thin even coat on the flat mating face only, then drop the Back Body straight down the three pins until the seam closes with no gap. The pins carry the alignment, the glue carries the load.",
+   "joints": [
+    "Back Body|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 thin coat on the flat face",
+     "k": "glue"
+    },
+    {
+     "t": "Seam must close fully",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Front Body",
+   "new": [
+    "Front Body"
+   ],
+   "desc": "The square locator on the front of the Mid Body is the key. Put glue INSIDE the square socket of the Front Body, not on the outer seam, then slide the Front Body straight back along the car axis until the two shells butt edge to edge. Check from above that the nose is square before the glue grabs.",
+   "joints": [
+    "Front Body|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 inside the square socket",
+     "k": "glue"
+    },
+    {
+     "t": "Edges butt flush",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Left rear suspension",
+   "new": [
+    "Left Rear Suspension"
+   ],
+   "desc": "Glue the flat inboard plate of the left suspension and set it into the shallow recess on the side of the Back Body. Bring it in horizontally, not from above: the three rods must enter their recesses together. The top rod should just touch the underside of the rear wing endplate, which sets the rake.",
+   "joints": [
+    "Left Rear Suspension|Back Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 plate face into the recess",
+     "k": "glue"
+    },
+    {
+     "t": "Top rod touches the wing",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Right rear suspension",
+   "new": [
+    "Right Rear Suspension"
+   ],
+   "desc": "Repeat on the right side. Compare both sides by eye from the rear before the glue sets: the two hub cups must sit at the same height and the same distance from the body, or the axle will not spin true.",
+   "joints": [
+    "Right Rear Suspension|Back Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 plate face into the recess",
+     "k": "glue"
+    },
+    {
+     "t": "Match the left side",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Front mini-wing",
+   "new": [
+    "Front Mini-Wing"
+   ],
+   "desc": "Slide the Front Mini-Wing through the slot in the nose so an equal amount protrudes on each side. One small drop of glue in the slot is enough. Sight along the nose from the front to check it is level.",
+   "joints": [
+    "Front Mini-Wing|Front Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 one drop in the slot",
+     "k": "glue"
+    },
+    {
+     "t": "Equal overhang both sides",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Rear axle + first hub",
+   "new": [
+    "Rear Axle",
+    "Rear Wheel Hub 1"
+   ],
+   "desc": "Glue the Rear Axle into the centre bore of the LEFT rear hub only, pushing it in until it bottoms out. Then thread the bare end of the axle through the left suspension, the Back Body and the right suspension. Keep glue away from those three bores or the axle will seize.",
+   "joints": [
+    "Rear Axle|Rear Wheel Hub 1"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 inside the hub bore only",
+     "k": "glue"
+    },
+    {
+     "t": "Slide through \u2014 bores stay dry"
+    }
+   ]
+  },
+  {
+   "title": "Second rear hub",
+   "new": [
+    "Rear Wheel Hub 2"
+   ],
+   "desc": "Glue the right rear hub onto the protruding axle end, pushing it fully home so both hubs sit the same distance from the body. Spin it immediately, before the glue cures: it must turn freely with no wobble.",
+   "joints": [
+    "Rear Axle|Rear Wheel Hub 2"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 axle end into the bore",
+     "k": "glue"
+    },
+    {
+     "t": "Must spin freely",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Rear tyres",
+   "new": [
+    "Rear Tyre L",
+    "Rear Tyre R"
+   ],
+   "desc": "Press the two rear tyres straight onto the hubs, not at an angle. It is a tight interference fit and deliberately takes no glue, so a tyre can be replaced later.",
+   "joints": [
+    "Rear Tyre L|Rear Wheel Hub 1",
+    "Rear Tyre R|Rear Wheel Hub 2"
+   ],
+   "fasten": [
+    {
+     "t": "Press fit \u2014 no glue",
+     "k": "check"
+    },
+    {
+     "t": "Push straight on"
+    }
+   ]
+  },
+  {
+   "title": "Left front inner hub",
+   "new": [
+    "Front Wheel Inner Hub A 1",
+    "Front Wheel Inner Hub B 1"
+   ],
+   "desc": "The two halves clamp around the left front axle stub. Try them dry first. Glue the two halves TO EACH OTHER along their flat mating faces only, never to the stub, and make sure the backs finish flush. Once cured the pair spins on the stub as one collar.",
+   "joints": [
+    "Front Wheel Inner Hub A 1|Front Wheel Inner Hub B 1"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 half to half only",
+     "k": "glue"
+    },
+    {
+     "t": "Never glue the stub",
+     "k": "check"
+    },
+    {
+     "t": "Backs flush"
+    }
+   ]
+  },
+  {
+   "title": "Right front inner hub",
+   "new": [
+    "Front Wheel Inner Hub A 2",
+    "Front Wheel Inner Hub B 2"
+   ],
+   "desc": "Repeat on the right stub. The front wheels are designed with a little camber, so a finished wheel will not stand perfectly vertical. That is correct.",
+   "joints": [
+    "Front Wheel Inner Hub A 2|Front Wheel Inner Hub B 2"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 half to half only",
+     "k": "glue"
+    },
+    {
+     "t": "Slight camber is normal",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Front hubs",
+   "new": [
+    "Front Wheel Hub 1",
+    "Front Wheel Hub 2"
+   ],
+   "desc": "Glue each front hub onto the outer face of its inner-hub collar, keeping the glue on that face so it cannot run into the stub. Spin each one to confirm it still turns before moving on.",
+   "joints": [
+    "Front Wheel Hub 1|Front Wheel Inner Hub A 1",
+    "Front Wheel Hub 2|Front Wheel Inner Hub A 2"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 outer collar face",
+     "k": "glue"
+    },
+    {
+     "t": "Still spins",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Front tyres",
+   "new": [
+    "Front Tyre L",
+    "Front Tyre R"
+   ],
+   "desc": "Press the two front tyres on dry, exactly like the rears. They are narrower than the rear pair, so do not mix them up.",
+   "joints": [
+    "Front Tyre L|Front Wheel Hub 1",
+    "Front Tyre R|Front Wheel Hub 2"
+   ],
+   "fasten": [
+    {
+     "t": "Press fit \u2014 no glue",
+     "k": "check"
+    },
+    {
+     "t": "Narrower than the rears"
+    }
+   ]
+  },
+  {
+   "title": "Camera mounts",
+   "new": [
+    "Side Camera Mount",
+    "Side Camera Mount 2",
+    "Top Camera Mount"
+   ],
+   "desc": "Glue the three camera pods into their locating holes: one on each sidepod shoulder and one on top of the airbox. A single drop in each hole, then press the pod down until its base sits flat on the bodywork. Sight across the car from the front so both side pods stand at the same angle, and check the top pod points straight forward along the centreline.",
+   "joints": [
+    "Side Camera Mount|Mid Body",
+    "Side Camera Mount 2|Mid Body",
+    "Top Camera Mount|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 one drop per hole",
+     "k": "glue"
+    },
+    {
+     "t": "Bases sit flat",
+     "k": "check"
+    },
+    {
+     "t": "Pods symmetric",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Halo",
+   "new": [
+    "Halo"
+   ],
+   "desc": "The Halo has three legs: two rear posts and one front pillar. Lower it straight down so all three enter their slots at the same time, then press until the hoop sits level. Glue in the slots, not on the cockpit rim, so none squeezes out where it will show.",
+   "joints": [
+    "Halo|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 thin bead in the 3 slots",
+     "k": "glue"
+    },
+    {
+     "t": "All 3 legs enter together",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Rear stabiliser fin",
+   "new": [
+    "Rear Stabiliser Fin"
+   ],
+   "desc": "Slide the thin fin into the slot on the engine cover, vertical and on the centreline. A bead along the slot is enough; the fin is fragile, so press on its base, not its tip.",
+   "joints": [
+    "Rear Stabiliser Fin|Mid Body"
+   ],
+   "fasten": [
+    {
+     "t": "Glue \u2014 bead along the slot",
+     "k": "glue"
+    },
+    {
+     "t": "Vertical, on centreline",
+     "k": "check"
+    }
+   ]
+  },
+  {
+   "title": "Finished",
+   "new": [],
+   "desc": "The completed car. The rear axle turns as one with both rear wheels; each front wheel spins on its own stub. Let the glue cure fully before rolling it.",
+   "joints": [],
+   "fasten": [
+    {
+     "t": "Rear axle spins",
+     "k": "check"
+    },
+    {
+     "t": "Front wheels spin",
+     "k": "check"
+    }
+   ]
+  }
+ ],
+ "stickers": [
+  {
+   "name": "Sidepod top L",
+   "decal": "decals/d05.png",
+   "size": [
+    40,
+    13
+   ],
+   "pos": [
+    -29.41,
+    1.78,
+    26.28
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Dell panel on the sidepod shoulder \u2014 align its front edge with the cockpit",
+   "order": 0
+  },
+  {
+   "name": "Sidepod upper L",
+   "decal": "decals/d08.png",
+   "size": [
+    26,
+    7
+   ],
+   "pos": [
+    -20.41,
+    -3.61,
+    34.81
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome + okta strip along the top of the sidepod flank",
+   "order": 1
+  },
+  {
+   "name": "Sidepod lower L",
+   "decal": "decals/d02.png",
+   "size": [
+    40,
+    9
+   ],
+   "pos": [
+    -38.41,
+    -11.61,
+    34.81
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "OKX checkered flank panel \u2014 pre-cut into 3, do not stretch it round the curve",
+   "order": 2
+  },
+  {
+   "name": "Sidepod top R",
+   "decal": "decals/d06.png",
+   "size": [
+    40,
+    13
+   ],
+   "pos": [
+    -29.41,
+    1.78,
+    -26.28
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Dell panel on the sidepod shoulder \u2014 align its front edge with the cockpit",
+   "order": 0
+  },
+  {
+   "name": "Sidepod upper R",
+   "decal": "decals/d13.png",
+   "size": [
+    26,
+    7
+   ],
+   "pos": [
+    -20.41,
+    -3.61,
+    -34.81
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome + okta strip along the top of the sidepod flank",
+   "order": 1
+  },
+  {
+   "name": "Sidepod lower R",
+   "decal": "decals/d03.png",
+   "size": [
+    40,
+    9
+   ],
+   "pos": [
+    -38.41,
+    -11.61,
+    -34.81
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "OKX checkered flank panel \u2014 pre-cut into 3, do not stretch it round the curve",
+   "order": 2
+  },
+  {
+   "name": "Engine cover",
+   "decal": "decals/d07.png",
+   "size": [
+    24,
+    13
+   ],
+   "pos": [
+    -57.47,
+    13.5,
+    0.0
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Dropbox panel on the engine cover, clear of the fin slot",
+   "order": 3
+  },
+  {
+   "name": "Airbox",
+   "decal": "decals/d22.png",
+   "size": [
+    16,
+    6
+   ],
+   "pos": [
+    -23.8,
+    21.3,
+    0.0
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "small sponsor block behind the airbox intake",
+   "order": 4
+  },
+  {
+   "name": "Cockpit side L",
+   "decal": "decals/d23.png",
+   "size": [
+    16,
+    5
+   ],
+   "pos": [
+    15.49,
+    6.53,
+    9.99
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "freshworks strip beside the cockpit opening",
+   "order": 5
+  },
+  {
+   "name": "Cockpit side R",
+   "decal": "decals/d24.png",
+   "size": [
+    16,
+    5
+   ],
+   "pos": [
+    15.49,
+    6.53,
+    -9.99
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "freshworks strip beside the cockpit opening",
+   "order": 5
+  },
+  {
+   "name": "Nose centreline",
+   "decal": "decals/d00.png",
+   "size": [
+    52,
+    18
+   ],
+   "pos": [
+    74.7,
+    4.91,
+    0.0
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "the long #81 chassis strip: start at the cockpit and work FORWARD, pressing from the centre out",
+   "order": 6
+  },
+  {
+   "name": "Front wing L",
+   "decal": "decals/d25.png",
+   "size": [
+    13,
+    32
+   ],
+   "pos": [
+    113.75,
+    -14.5,
+    22.32
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "top surface of the main front-wing element",
+   "order": 7
+  },
+  {
+   "name": "Front flap L",
+   "decal": "decals/d33.png",
+   "size": [
+    11,
+    28
+   ],
+   "pos": [
+    108.66,
+    -10.71,
+    20.46
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "thin orange trim along the second element",
+   "order": 8
+  },
+  {
+   "name": "Front endplate L",
+   "decal": "decals/d20.png",
+   "size": [
+    17,
+    11
+   ],
+   "pos": [
+    110.35,
+    -11.69,
+    45.31
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "outer face of the front-wing endplate",
+   "order": 9
+  },
+  {
+   "name": "Front wing R",
+   "decal": "decals/d26.png",
+   "size": [
+    13,
+    32
+   ],
+   "pos": [
+    113.75,
+    -14.5,
+    -22.32
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "top surface of the main front-wing element",
+   "order": 7
+  },
+  {
+   "name": "Front flap R",
+   "decal": "decals/d34.png",
+   "size": [
+    11,
+    28
+   ],
+   "pos": [
+    108.66,
+    -10.71,
+    -20.46
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "thin orange trim along the second element",
+   "order": 8
+  },
+  {
+   "name": "Front endplate R",
+   "decal": "decals/d21.png",
+   "size": [
+    17,
+    11
+   ],
+   "pos": [
+    110.35,
+    -11.69,
+    -45.31
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "outer face of the front-wing endplate",
+   "order": 9
+  },
+  {
+   "name": "Rear wing",
+   "decal": "decals/d04.png",
+   "size": [
+    48,
+    17
+   ],
+   "pos": [
+    -114.95,
+    18.94,
+    0.0
+   ],
+   "n": [
+    0,
+    1,
+    0
+   ],
+   "u": [
+    0,
+    0,
+    1
+   ],
+   "note": "VELO.COM / OKX panel across the rear wing main plane",
+   "order": 10
+  },
+  {
+   "name": "Rear endplate L",
+   "decal": "decals/d14.png",
+   "size": [
+    17,
+    16
+   ],
+   "pos": [
+    -114.02,
+    8.9,
+    31.89
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Arrow / workday block on the rear endplate",
+   "order": 11
+  },
+  {
+   "name": "Rear endplate R",
+   "decal": "decals/d15.png",
+   "size": [
+    17,
+    16
+   ],
+   "pos": [
+    -114.02,
+    8.9,
+    -31.89
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Arrow / workday block on the rear endplate",
+   "order": 11
+  },
+  {
+   "name": "Rear Tyre L sidewall",
+   "decal": "decals/d09.png",
+   "size": [
+    35.6,
+    35.6
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    47.7
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "PIRELLI sidewall ring \u2014 centre it on the tyre before pressing down",
+   "order": 12
+  },
+  {
+   "name": "Rear wheel L cover",
+   "decal": "decals/d16.png",
+   "size": [
+    18.512,
+    18.512
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    48.2
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome wheel-cover disc over the hub face",
+   "order": 13
+  },
+  {
+   "name": "Rear Tyre R sidewall",
+   "decal": "decals/d10.png",
+   "size": [
+    35.6,
+    35.6
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    -47.7
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "PIRELLI sidewall ring \u2014 centre it on the tyre before pressing down",
+   "order": 12
+  },
+  {
+   "name": "Rear wheel R cover",
+   "decal": "decals/d17.png",
+   "size": [
+    18.512,
+    18.512
+   ],
+   "pos": [
+    -96.4,
+    -11.3,
+    -48.2
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome wheel-cover disc over the hub face",
+   "order": 13
+  },
+  {
+   "name": "Front Tyre L sidewall",
+   "decal": "decals/d11.png",
+   "size": [
+    35.6,
+    35.6
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    48.7
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "PIRELLI sidewall ring \u2014 centre it on the tyre before pressing down",
+   "order": 12
+  },
+  {
+   "name": "Front wheel L cover",
+   "decal": "decals/d18.png",
+   "size": [
+    18.512,
+    18.512
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    49.2
+   ],
+   "n": [
+    0,
+    0,
+    1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome wheel-cover disc over the hub face",
+   "order": 13
+  },
+  {
+   "name": "Front Tyre R sidewall",
+   "decal": "decals/d12.png",
+   "size": [
+    35.6,
+    35.6
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    -48.7
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "PIRELLI sidewall ring \u2014 centre it on the tyre before pressing down",
+   "order": 12
+  },
+  {
+   "name": "Front wheel R cover",
+   "decal": "decals/d19.png",
+   "size": [
+    18.512,
+    18.512
+   ],
+   "pos": [
+    71.5,
+    -11.1,
+    -49.2
+   ],
+   "n": [
+    0,
+    0,
+    -1
+   ],
+   "u": [
+    1,
+    0,
+    0
+   ],
+   "note": "Chrome wheel-cover disc over the hub face",
+   "order": 13
+  }
+ ],
+ "liveries": {
+  "McLaren": {
+   "primary": "#ff8000",
+   "secondary": "#ff8000",
+   "dark": "#1b1c20"
+  },
+  "Red Bull": {
+   "primary": "#0b1f5c",
+   "secondary": "#d6002a",
+   "dark": "#10122a"
+  },
+  "Ferrari": {
+   "primary": "#d40000",
+   "secondary": "#ffd400",
+   "dark": "#1b1c20"
+  }
+ },
+ "glue": {
+  "Locating Pin 1|Mid Body": {
+   "a": "Locating Pin 1",
+   "b": "Mid Body",
+   "kind": "press",
+   "patches": [
+    {
+     "centroid": [
+      -78.72,
+      -16.96,
+      -12.08
+     ],
+     "normal": [
+      -0.987,
+      -0.117,
+      0.106
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      4.78,
+      4.59,
+      1.93
+     ],
+     "area": 69.0,
+     "n_pts": 21,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -78.4,
+       -14.54,
+       -14.35
+      ],
+      [
+       -78.4,
+       -14.54,
+       -14.35
+      ],
+      [
+       -78.4,
+       -19.3,
+       -14.35
+      ],
+      [
+       -78.4,
+       -19.3,
+       -14.35
+      ],
+      [
+       -78.4,
+       -19.3,
+       -14.35
+      ],
+      [
+       -78.4,
+       -19.3,
+       -14.35
+      ],
+      [
+       -78.4,
+       -19.3,
+       -9.59
+      ],
+      [
+       -78.4,
+       -19.3,
+       -9.59
+      ],
+      [
+       -78.4,
+       -19.3,
+       -9.59
+      ],
+      [
+       -78.4,
+       -14.54,
+       -9.59
+      ],
+      [
+       -78.4,
+       -14.54,
+       -9.59
+      ],
+      [
+       -78.4,
+       -14.54,
+       -9.59
+      ],
+      [
+       -78.4,
+       -14.54,
+       -9.59
+      ],
+      [
+       -78.4,
+       -14.54,
+       -14.35
+      ]
+     ]
+    }
+   ]
+  },
+  "Back Body|Mid Body": {
+   "a": "Back Body",
+   "b": "Mid Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -85.42,
+      -9.02,
+      -0.02
+     ],
+     "normal": [
+      -1.0,
+      0.006,
+      -0.001
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      26.92,
+      24.61,
+      1.4
+     ],
+     "area": 2081.5,
+     "n_pts": 7851,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -84.4,
+       -12.85,
+       16.72
+      ],
+      [
+       -84.4,
+       -1.41,
+       12.36
+      ],
+      [
+       -85.32,
+       2.23,
+       11.0
+      ],
+      [
+       -85.34,
+       7.4,
+       5.06
+      ],
+      [
+       -85.46,
+       8.34,
+       -2.87
+      ],
+      [
+       -84.79,
+       3.49,
+       -8.73
+      ],
+      [
+       -84.8,
+       -0.39,
+       -12.37
+      ],
+      [
+       -84.4,
+       -12.82,
+       -16.59
+      ],
+      [
+       -85.56,
+       -15.13,
+       -16.46
+      ],
+      [
+       -84.4,
+       -19.42,
+       -14.47
+      ],
+      [
+       -84.4,
+       -19.42,
+       -14.47
+      ],
+      [
+       -84.4,
+       -20.47,
+       13.68
+      ],
+      [
+       -84.4,
+       -20.47,
+       13.68
+      ],
+      [
+       -85.72,
+       -17.98,
+       14.82
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -85.51,
+      -21.85,
+      9.21
+     ],
+     "normal": [
+      0.177,
+      0.153,
+      -0.972
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      2.31,
+      1.42,
+      0.25
+     ],
+     "area": 10.3,
+     "n_pts": 873,
+     "how": "single small drop",
+     "marks": [
+      [
+       -85.46,
+       -21.52,
+       9.13
+      ],
+      [
+       -86.67,
+       -23.99,
+       8.39
+      ],
+      [
+       -84.4,
+       -23.68,
+       9.25
+      ],
+      [
+       -84.4,
+       -19.42,
+       9.47
+      ],
+      [
+       -84.4,
+       -21.0,
+       9.93
+      ],
+      [
+       -86.67,
+       -21.01,
+       9.39
+      ],
+      [
+       -85.68,
+       -23.59,
+       9.05
+      ],
+      [
+       -84.4,
+       -21.6,
+       9.32
+      ],
+      [
+       -86.48,
+       -23.4,
+       8.93
+      ],
+      [
+       -86.23,
+       -21.54,
+       8.98
+      ],
+      [
+       -85.46,
+       -21.0,
+       9.71
+      ],
+      [
+       -85.8,
+       -22.2,
+       9.06
+      ],
+      [
+       -85.09,
+       -23.94,
+       8.82
+      ],
+      [
+       -84.86,
+       -21.12,
+       9.48
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -85.46,
+      -21.85,
+      -9.23
+     ],
+     "normal": [
+      -0.177,
+      -0.159,
+      -0.971
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      2.32,
+      1.39,
+      0.25
+     ],
+     "area": 10.1,
+     "n_pts": 866,
+     "how": "single small drop",
+     "marks": [
+      [
+       -85.45,
+       -23.52,
+       -9.11
+      ],
+      [
+       -85.1,
+       -23.53,
+       -9.18
+      ],
+      [
+       -84.4,
+       -21.6,
+       -9.32
+      ],
+      [
+       -84.4,
+       -21.6,
+       -9.32
+      ],
+      [
+       -84.4,
+       -21.6,
+       -9.32
+      ],
+      [
+       -84.73,
+       -21.15,
+       -9.47
+      ],
+      [
+       -85.11,
+       -21.04,
+       -9.56
+      ],
+      [
+       -85.57,
+       -21.05,
+       -9.47
+      ],
+      [
+       -85.93,
+       -21.07,
+       -9.35
+      ],
+      [
+       -86.27,
+       -21.21,
+       -9.12
+      ],
+      [
+       -86.51,
+       -21.6,
+       -8.93
+      ],
+      [
+       -86.51,
+       -21.6,
+       -8.93
+      ],
+      [
+       -85.8,
+       -22.2,
+       -9.06
+      ],
+      [
+       -85.8,
+       -22.2,
+       -9.06
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Body|Mid Body": {
+   "a": "Front Body",
+   "b": "Mid Body",
+   "kind": "glue",
+   "manual": true,
+   "patches": [
+    {
+     "centroid": [
+      56.18,
+      -4.63,
+      0.04
+     ],
+     "normal": [
+      1,
+      0,
+      0
+     ],
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "slot",
+     "extent": [
+      7,
+      2,
+      2
+     ],
+     "area": 90,
+     "n_pts": 0,
+     "how": "glue inside the square socket, not on the outer seam",
+     "marks": [
+      [
+       56.18,
+       -11.63,
+       0.04
+      ],
+      [
+       56.18,
+       -8.83,
+       0.04
+      ],
+      [
+       56.18,
+       -6.03,
+       0.04
+      ],
+      [
+       56.18,
+       -3.23,
+       0.04
+      ],
+      [
+       56.18,
+       -0.43,
+       0.04
+      ],
+      [
+       56.18,
+       2.37,
+       0.04
+      ]
+     ]
+    }
+   ]
+  },
+  "Left Rear Suspension|Back Body": {
+   "a": "Left Rear Suspension",
+   "b": "Back Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -93.7,
+      -17.31,
+      -15.75
+     ],
+     "normal": [
+      0.008,
+      0.987,
+      -0.162
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      8.78,
+      3.46,
+      1.89
+     ],
+     "area": 95.5,
+     "n_pts": 20740,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -88.85,
+       -18.57,
+       -16.79
+      ],
+      [
+       -89.73,
+       -17.06,
+       -14.71
+      ],
+      [
+       -90.23,
+       -16.85,
+       -14.71
+      ],
+      [
+       -95.0,
+       -16.96,
+       -12.1
+      ],
+      [
+       -95.03,
+       -16.77,
+       -12.1
+      ],
+      [
+       -96.16,
+       -16.58,
+       -12.1
+      ],
+      [
+       -97.46,
+       -16.54,
+       -12.1
+      ],
+      [
+       -98.86,
+       -18.08,
+       -15.1
+      ],
+      [
+       -98.49,
+       -18.29,
+       -17.07
+      ],
+      [
+       -97.11,
+       -18.53,
+       -18.52
+      ],
+      [
+       -95.53,
+       -18.0,
+       -18.54
+      ],
+      [
+       -92.82,
+       -18.11,
+       -19.54
+      ],
+      [
+       -91.51,
+       -18.34,
+       -19.52
+      ],
+      [
+       -89.68,
+       -18.24,
+       -18.5
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -95.97,
+      -3.4,
+      -9.13
+     ],
+     "normal": [
+      0.035,
+      0.85,
+      0.525
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      3.28,
+      2.67,
+      1.37
+     ],
+     "area": 27.5,
+     "n_pts": 6001,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -98.38,
+       -3.08,
+       -9.4
+      ],
+      [
+       -98.13,
+       -3.75,
+       -8.47
+      ],
+      [
+       -97.55,
+       -4.21,
+       -7.92
+      ],
+      [
+       -96.79,
+       -4.46,
+       -7.4
+      ],
+      [
+       -95.79,
+       -4.61,
+       -7.33
+      ],
+      [
+       -94.85,
+       -4.49,
+       -7.57
+      ],
+      [
+       -94.19,
+       -4.16,
+       -8.14
+      ],
+      [
+       -93.89,
+       -3.64,
+       -8.89
+      ],
+      [
+       -94.03,
+       -3.16,
+       -9.69
+      ],
+      [
+       -94.49,
+       -2.7,
+       -10.35
+      ],
+      [
+       -95.24,
+       -2.34,
+       -10.83
+      ],
+      [
+       -96.1,
+       -2.15,
+       -11.01
+      ],
+      [
+       -97.13,
+       -2.16,
+       -10.75
+      ],
+      [
+       -97.87,
+       -2.41,
+       -10.17
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -89.73,
+      -10.16,
+      -9.77
+     ],
+     "normal": [
+      -0.206,
+      0.318,
+      0.925
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "shaft",
+     "extent": [
+      3.49,
+      2.17,
+      1.52
+     ],
+     "area": 23.8,
+     "n_pts": 7327,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -92.2,
+       -10.07,
+       -9.79
+      ],
+      [
+       -91.62,
+       -8.86,
+       -10.02
+      ],
+      [
+       -90.79,
+       -8.37,
+       -10.39
+      ],
+      [
+       -89.95,
+       -8.35,
+       -10.42
+      ],
+      [
+       -89.18,
+       -8.57,
+       -10.19
+      ],
+      [
+       -88.52,
+       -8.89,
+       -9.95
+      ],
+      [
+       -87.85,
+       -9.38,
+       -9.61
+      ],
+      [
+       -87.57,
+       -10.3,
+       -9.57
+      ],
+      [
+       -87.93,
+       -11.21,
+       -9.28
+      ],
+      [
+       -88.68,
+       -11.7,
+       -9.05
+      ],
+      [
+       -89.52,
+       -11.8,
+       -9.04
+      ],
+      [
+       -90.27,
+       -11.67,
+       -9.19
+      ],
+      [
+       -90.98,
+       -11.39,
+       -9.59
+      ],
+      [
+       -91.67,
+       -11.03,
+       -9.92
+      ]
+     ]
+    }
+   ]
+  },
+  "Right Rear Suspension|Back Body": {
+   "a": "Right Rear Suspension",
+   "b": "Back Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -93.7,
+      -17.49,
+      15.84
+     ],
+     "normal": [
+      0.023,
+      0.987,
+      0.157
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      8.75,
+      3.56,
+      1.93
+     ],
+     "area": 97.9,
+     "n_pts": 21670,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -88.79,
+       -18.8,
+       16.94
+      ],
+      [
+       -89.63,
+       -18.4,
+       18.65
+      ],
+      [
+       -91.33,
+       -18.6,
+       19.44
+      ],
+      [
+       -93.15,
+       -18.16,
+       19.42
+      ],
+      [
+       -95.5,
+       -18.06,
+       19.44
+      ],
+      [
+       -96.98,
+       -18.63,
+       18.96
+      ],
+      [
+       -98.56,
+       -18.37,
+       17.28
+      ],
+      [
+       -98.94,
+       -18.14,
+       15.18
+      ],
+      [
+       -97.39,
+       -17.63,
+       12.1
+      ],
+      [
+       -95.47,
+       -16.89,
+       12.1
+      ],
+      [
+       -95.08,
+       -16.93,
+       12.1
+      ],
+      [
+       -95.06,
+       -17.13,
+       12.1
+      ],
+      [
+       -90.28,
+       -17.14,
+       14.71
+      ],
+      [
+       -89.27,
+       -17.3,
+       14.71
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -95.67,
+      -3.53,
+      9.11
+     ],
+     "normal": [
+      -0.054,
+      -0.842,
+      0.537
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      3.3,
+      2.64,
+      1.35
+     ],
+     "area": 27.4,
+     "n_pts": 5911,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -93.59,
+       -3.88,
+       8.75
+      ],
+      [
+       -93.68,
+       -3.44,
+       9.54
+      ],
+      [
+       -94.07,
+       -2.99,
+       10.29
+      ],
+      [
+       -94.69,
+       -2.6,
+       10.77
+      ],
+      [
+       -95.56,
+       -2.3,
+       10.9
+      ],
+      [
+       -96.66,
+       -2.25,
+       10.76
+      ],
+      [
+       -97.42,
+       -2.43,
+       10.22
+      ],
+      [
+       -98.03,
+       -3.05,
+       9.41
+      ],
+      [
+       -97.92,
+       -3.74,
+       8.6
+      ],
+      [
+       -97.41,
+       -4.21,
+       7.99
+      ],
+      [
+       -96.59,
+       -4.56,
+       7.43
+      ],
+      [
+       -95.7,
+       -4.74,
+       7.27
+      ],
+      [
+       -94.63,
+       -4.67,
+       7.51
+      ],
+      [
+       -93.98,
+       -4.4,
+       7.98
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -89.61,
+      -10.47,
+      9.81
+     ],
+     "normal": [
+      0.19,
+      -0.418,
+      0.888
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "shaft",
+     "extent": [
+      3.47,
+      2.15,
+      1.62
+     ],
+     "area": 23.5,
+     "n_pts": 7378,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -92.07,
+       -10.66,
+       9.9
+      ],
+      [
+       -91.53,
+       -9.11,
+       10.07
+      ],
+      [
+       -90.55,
+       -8.59,
+       10.49
+      ],
+      [
+       -89.79,
+       -8.6,
+       10.59
+      ],
+      [
+       -88.99,
+       -8.87,
+       10.44
+      ],
+      [
+       -88.33,
+       -9.26,
+       10.08
+      ],
+      [
+       -87.74,
+       -9.75,
+       9.72
+      ],
+      [
+       -87.46,
+       -10.58,
+       9.6
+      ],
+      [
+       -87.84,
+       -11.56,
+       9.28
+      ],
+      [
+       -88.58,
+       -12.06,
+       8.98
+      ],
+      [
+       -89.48,
+       -12.12,
+       8.99
+      ],
+      [
+       -90.21,
+       -11.96,
+       9.11
+      ],
+      [
+       -90.9,
+       -11.67,
+       9.5
+      ],
+      [
+       -91.47,
+       -11.34,
+       9.79
+      ]
+     ]
+    }
+   ]
+  },
+  "Rear Axle|Rear Wheel Hub 1": {
+   "a": "Rear Axle",
+   "b": "Rear Wheel Hub 1",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -96.43,
+      -11.31,
+      37.5
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      3.73,
+      3.65,
+      0.0
+     ],
+     "area": 42.8,
+     "n_pts": 643,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -94.6,
+       -13.19,
+       37.5
+      ],
+      [
+       -93.95,
+       -12.16,
+       37.5
+      ],
+      [
+       -93.78,
+       -11.12,
+       37.5
+      ],
+      [
+       -94.15,
+       -9.95,
+       37.5
+      ],
+      [
+       -95.01,
+       -9.07,
+       37.5
+      ],
+      [
+       -96.12,
+       -8.71,
+       37.5
+      ],
+      [
+       -97.23,
+       -8.81,
+       37.5
+      ],
+      [
+       -98.27,
+       -9.46,
+       37.5
+      ],
+      [
+       -98.85,
+       -10.35,
+       37.5
+      ],
+      [
+       -99.01,
+       -11.57,
+       37.5
+      ],
+      [
+       -98.6,
+       -12.73,
+       37.5
+      ],
+      [
+       -97.86,
+       -13.48,
+       37.5
+      ],
+      [
+       -96.71,
+       -13.91,
+       37.5
+      ],
+      [
+       -95.61,
+       -13.78,
+       37.5
+      ]
+     ]
+    }
+   ]
+  },
+  "Rear Axle|Rear Wheel Hub 2": {
+   "a": "Rear Axle",
+   "b": "Rear Wheel Hub 2",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -96.43,
+      -11.3,
+      -37.5
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      3.72,
+      3.65,
+      0.0
+     ],
+     "area": 42.7,
+     "n_pts": 643,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -98.01,
+       -9.22,
+       -37.5
+      ],
+      [
+       -97.0,
+       -8.76,
+       -37.5
+      ],
+      [
+       -95.78,
+       -8.77,
+       -37.5
+      ],
+      [
+       -94.72,
+       -9.28,
+       -37.5
+      ],
+      [
+       -93.99,
+       -10.26,
+       -37.5
+      ],
+      [
+       -93.78,
+       -11.3,
+       -37.5
+      ],
+      [
+       -94.07,
+       -12.49,
+       -37.5
+      ],
+      [
+       -94.86,
+       -13.43,
+       -37.5
+      ],
+      [
+       -95.83,
+       -13.86,
+       -37.5
+      ],
+      [
+       -97.06,
+       -13.84,
+       -37.5
+      ],
+      [
+       -98.14,
+       -13.26,
+       -37.5
+      ],
+      [
+       -98.78,
+       -12.42,
+       -37.5
+      ],
+      [
+       -99.02,
+       -11.27,
+       -37.5
+      ],
+      [
+       -98.78,
+       -10.18,
+       -37.5
+      ]
+     ]
+    }
+   ]
+  },
+  "Rear Tyre L|Rear Wheel Hub 1": {
+   "a": "Rear Tyre L",
+   "b": "Rear Wheel Hub 1",
+   "kind": "press",
+   "patches": [
+    {
+     "centroid": [
+      -96.24,
+      -10.84,
+      47.09
+     ],
+     "normal": [
+      -0.0,
+      -0.001,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      18.28,
+      17.62,
+      0.29
+     ],
+     "area": 1011.8,
+     "n_pts": 5341,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -83.9,
+       -14.31,
+       47.06
+      ],
+      [
+       -86.67,
+       -19.08,
+       47.14
+      ],
+      [
+       -91.16,
+       -22.6,
+       47.14
+      ],
+      [
+       -96.71,
+       -23.75,
+       47.14
+      ],
+      [
+       -102.55,
+       -22.13,
+       47.14
+      ],
+      [
+       -106.73,
+       -18.27,
+       47.14
+      ],
+      [
+       -108.72,
+       -13.14,
+       47.14
+      ],
+      [
+       -108.64,
+       -7.35,
+       47.06
+      ],
+      [
+       -105.78,
+       -2.5,
+       47.06
+      ],
+      [
+       -101.19,
+       1.06,
+       46.98
+      ],
+      [
+       -95.68,
+       1.74,
+       47.02
+      ],
+      [
+       -90.15,
+       0.39,
+       46.98
+      ],
+      [
+       -85.79,
+       -3.35,
+       46.98
+      ],
+      [
+       -83.61,
+       -8.67,
+       47.02
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -96.35,
+      -11.22,
+      25.4
+     ],
+     "normal": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.83,
+      16.63,
+      0.0
+     ],
+     "area": 878.9,
+     "n_pts": 1373,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -108.0,
+       -10.18,
+       25.4
+      ],
+      [
+       -107.34,
+       -15.33,
+       25.4
+      ],
+      [
+       -104.51,
+       -19.68,
+       25.4
+      ],
+      [
+       -100.07,
+       -22.36,
+       25.4
+      ],
+      [
+       -94.54,
+       -22.81,
+       25.4
+      ],
+      [
+       -89.73,
+       -20.86,
+       25.4
+      ],
+      [
+       -86.24,
+       -17.02,
+       25.4
+      ],
+      [
+       -84.77,
+       -12.05,
+       25.4
+      ],
+      [
+       -85.59,
+       -6.93,
+       25.4
+      ],
+      [
+       -88.29,
+       -2.93,
+       25.4
+      ],
+      [
+       -92.73,
+       -0.24,
+       25.4
+      ],
+      [
+       -97.89,
+       0.26,
+       25.4
+      ],
+      [
+       -102.76,
+       -1.53,
+       25.4
+      ],
+      [
+       -106.37,
+       -5.26,
+       25.4
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -96.38,
+      -11.2,
+      32.7
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.66,
+      16.39,
+      0.0
+     ],
+     "area": 858.2,
+     "n_pts": 190,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -106.65,
+       -16.86,
+       32.7
+      ],
+      [
+       -108.04,
+       -11.87,
+       32.7
+      ],
+      [
+       -107.12,
+       -6.73,
+       32.7
+      ],
+      [
+       -104.41,
+       -2.83,
+       32.7
+      ],
+      [
+       -99.57,
+       -0.08,
+       32.7
+      ],
+      [
+       -94.72,
+       0.24,
+       32.7
+      ],
+      [
+       -89.86,
+       -1.65,
+       32.7
+      ],
+      [
+       -86.31,
+       -5.46,
+       32.7
+      ],
+      [
+       -84.78,
+       -10.32,
+       32.7
+      ],
+      [
+       -85.53,
+       -15.52,
+       32.7
+      ],
+      [
+       -88.42,
+       -19.8,
+       32.7
+      ],
+      [
+       -92.89,
+       -22.42,
+       32.7
+      ],
+      [
+       -98.1,
+       -22.83,
+       32.7
+      ],
+      [
+       -102.95,
+       -20.95,
+       32.7
+      ]
+     ]
+    }
+   ]
+  },
+  "Rear Tyre R|Rear Wheel Hub 2": {
+   "a": "Rear Tyre R",
+   "b": "Rear Wheel Hub 2",
+   "kind": "press",
+   "patches": [
+    {
+     "centroid": [
+      -96.14,
+      -10.88,
+      -47.09
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      18.26,
+      17.66,
+      0.29
+     ],
+     "area": 1013.2,
+     "n_pts": 5381,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -108.66,
+       -9.09,
+       -47.14
+      ],
+      [
+       -108.37,
+       -14.75,
+       -47.14
+      ],
+      [
+       -105.51,
+       -19.8,
+       -47.14
+      ],
+      [
+       -100.55,
+       -23.05,
+       -47.14
+      ],
+      [
+       -94.9,
+       -23.67,
+       -47.14
+      ],
+      [
+       -89.64,
+       -21.76,
+       -47.14
+      ],
+      [
+       -85.43,
+       -18.0,
+       -47.06
+      ],
+      [
+       -83.4,
+       -12.56,
+       -47.02
+      ],
+      [
+       -84.02,
+       -7.14,
+       -47.02
+      ],
+      [
+       -86.81,
+       -2.14,
+       -46.98
+      ],
+      [
+       -91.63,
+       0.64,
+       -47.06
+      ],
+      [
+       -97.12,
+       1.74,
+       -47.02
+      ],
+      [
+       -102.7,
+       0.14,
+       -47.02
+      ],
+      [
+       -106.91,
+       -3.89,
+       -47.06
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -96.3,
+      -11.22,
+      -25.4
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.83,
+      16.62,
+      0.0
+     ],
+     "area": 879.0,
+     "n_pts": 1374,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -84.75,
+       -11.67,
+       -25.4
+      ],
+      [
+       -86.06,
+       -16.69,
+       -25.4
+      ],
+      [
+       -89.43,
+       -20.64,
+       -25.4
+      ],
+      [
+       -94.17,
+       -22.74,
+       -25.4
+      ],
+      [
+       -99.72,
+       -22.48,
+       -25.4
+      ],
+      [
+       -104.24,
+       -19.93,
+       -25.4
+      ],
+      [
+       -107.21,
+       -15.68,
+       -25.4
+      ],
+      [
+       -108.03,
+       -10.55,
+       -25.4
+      ],
+      [
+       -106.56,
+       -5.58,
+       -25.4
+      ],
+      [
+       -103.07,
+       -1.74,
+       -25.4
+      ],
+      [
+       -98.26,
+       0.21,
+       -25.4
+      ],
+      [
+       -93.08,
+       -0.12,
+       -25.4
+      ],
+      [
+       -88.56,
+       -2.67,
+       -25.4
+      ],
+      [
+       -85.59,
+       -6.93,
+       -25.4
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -96.42,
+      -11.2,
+      -32.7
+     ],
+     "normal": [
+      0.0,
+      -0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.66,
+      16.39,
+      0.0
+     ],
+     "area": 858.2,
+     "n_pts": 190,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       -86.15,
+       -16.86,
+       -32.7
+      ],
+      [
+       -84.76,
+       -11.87,
+       -32.7
+      ],
+      [
+       -85.68,
+       -6.73,
+       -32.7
+      ],
+      [
+       -88.39,
+       -2.83,
+       -32.7
+      ],
+      [
+       -93.23,
+       -0.08,
+       -32.7
+      ],
+      [
+       -98.08,
+       0.24,
+       -32.7
+      ],
+      [
+       -102.94,
+       -1.65,
+       -32.7
+      ],
+      [
+       -106.49,
+       -5.46,
+       -32.7
+      ],
+      [
+       -108.02,
+       -10.32,
+       -32.7
+      ],
+      [
+       -107.27,
+       -15.52,
+       -32.7
+      ],
+      [
+       -104.38,
+       -19.8,
+       -32.7
+      ],
+      [
+       -99.91,
+       -22.42,
+       -32.7
+      ],
+      [
+       -94.7,
+       -22.83,
+       -32.7
+      ],
+      [
+       -89.85,
+       -20.95,
+       -32.7
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Inner Hub A 1|Front Wheel Inner Hub B 1": {
+   "a": "Front Wheel Inner Hub A 1",
+   "b": "Front Wheel Inner Hub B 1",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      71.42,
+      -18.8,
+      33.6
+     ],
+     "normal": [
+      -0.992,
+      -0.102,
+      -0.071
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.13,
+      3.53,
+      1.71
+     ],
+     "area": 101.4,
+     "n_pts": 330,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       71.55,
+       -19.04,
+       33.48
+      ],
+      [
+       70.51,
+       -21.01,
+       41.53
+      ],
+      [
+       70.32,
+       -16.58,
+       28.68
+      ],
+      [
+       71.55,
+       -21.72,
+       28.95
+      ],
+      [
+       71.32,
+       -21.28,
+       37.34
+      ],
+      [
+       73.55,
+       -18.12,
+       28.76
+      ],
+      [
+       70.32,
+       -16.26,
+       34.67
+      ],
+      [
+       70.43,
+       -18.79,
+       39.21
+      ],
+      [
+       73.42,
+       -20.32,
+       31.54
+      ],
+      [
+       70.28,
+       -21.42,
+       33.14
+      ],
+      [
+       71.55,
+       -16.88,
+       32.03
+      ],
+      [
+       71.55,
+       -18.76,
+       41.41
+      ],
+      [
+       73.55,
+       -17.92,
+       32.75
+      ],
+      [
+       71.45,
+       -18.99,
+       37.02
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.42,
+      -3.56,
+      32.76
+     ],
+     "normal": [
+      -0.992,
+      0.095,
+      -0.082
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.15,
+      3.53,
+      1.7
+     ],
+     "area": 101.4,
+     "n_pts": 331,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       71.55,
+       -3.33,
+       32.66
+      ],
+      [
+       70.51,
+       -0.53,
+       40.45
+      ],
+      [
+       70.32,
+       -6.28,
+       28.14
+      ],
+      [
+       71.55,
+       -1.14,
+       27.87
+      ],
+      [
+       71.44,
+       -0.7,
+       36.26
+      ],
+      [
+       73.55,
+       -3.93,
+       29.35
+      ],
+      [
+       70.32,
+       -5.97,
+       34.13
+      ],
+      [
+       70.43,
+       -2.98,
+       38.38
+      ],
+      [
+       70.28,
+       -1.0,
+       32.07
+      ],
+      [
+       71.55,
+       -5.63,
+       31.44
+      ],
+      [
+       72.09,
+       -2.0,
+       30.58
+      ],
+      [
+       71.55,
+       -2.78,
+       40.57
+      ],
+      [
+       73.55,
+       -4.53,
+       32.05
+      ],
+      [
+       71.35,
+       -3.02,
+       36.18
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Inner Hub B 1|Front Wheel Inner Hub A 1": {
+   "a": "Front Wheel Inner Hub B 1",
+   "b": "Front Wheel Inner Hub A 1",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      72.73,
+      -3.61,
+      32.13
+     ],
+     "normal": [
+      -0.995,
+      0.063,
+      -0.08
+     ],
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.13,
+      3.84,
+      1.58
+     ],
+     "area": 110.2,
+     "n_pts": 474,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       72.26,
+       -3.81,
+       32.01
+      ],
+      [
+       71.56,
+       -0.48,
+       40.45
+      ],
+      [
+       74.97,
+       -1.72,
+       27.9
+      ],
+      [
+       73.95,
+       -6.71,
+       28.16
+      ],
+      [
+       73.17,
+       -0.82,
+       36.26
+      ],
+      [
+       75.08,
+       -1.54,
+       32.1
+      ],
+      [
+       71.56,
+       -1.67,
+       29.23
+      ],
+      [
+       74.1,
+       -6.58,
+       32.16
+      ],
+      [
+       71.76,
+       -2.9,
+       38.38
+      ],
+      [
+       71.56,
+       -1.15,
+       33.41
+      ],
+      [
+       71.56,
+       -5.82,
+       34.12
+      ],
+      [
+       71.56,
+       -5.47,
+       29.43
+      ],
+      [
+       73.08,
+       -2.93,
+       40.58
+      ],
+      [
+       73.66,
+       -3.19,
+       29.31
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      72.72,
+      -18.93,
+      33.18
+     ],
+     "normal": [
+      -0.993,
+      -0.103,
+      -0.061
+     ],
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      8.97,
+      3.73,
+      1.6
+     ],
+     "area": 105.2,
+     "n_pts": 469,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       72.96,
+       -18.48,
+       32.78
+      ],
+      [
+       71.56,
+       -21.06,
+       41.53
+      ],
+      [
+       71.56,
+       -21.72,
+       28.95
+      ],
+      [
+       71.56,
+       -16.72,
+       28.69
+      ],
+      [
+       73.17,
+       -21.16,
+       37.33
+      ],
+      [
+       75.07,
+       -19.91,
+       28.85
+      ],
+      [
+       74.1,
+       -15.97,
+       30.65
+      ],
+      [
+       71.56,
+       -21.13,
+       34.46
+      ],
+      [
+       75.08,
+       -20.88,
+       33.11
+      ],
+      [
+       71.96,
+       -18.86,
+       39.21
+      ],
+      [
+       71.56,
+       -16.41,
+       34.68
+      ],
+      [
+       72.65,
+       -20.68,
+       31.56
+      ],
+      [
+       73.08,
+       -18.61,
+       41.4
+      ],
+      [
+       72.88,
+       -18.88,
+       37.01
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Inner Hub A 2|Front Wheel Inner Hub B 2": {
+   "a": "Front Wheel Inner Hub A 2",
+   "b": "Front Wheel Inner Hub B 2",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      71.42,
+      -18.81,
+      -33.58
+     ],
+     "normal": [
+      -0.992,
+      -0.103,
+      0.071
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.15,
+      3.53,
+      1.71
+     ],
+     "area": 101.5,
+     "n_pts": 330,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       71.55,
+       -19.04,
+       -33.48
+      ],
+      [
+       70.51,
+       -21.01,
+       -41.53
+      ],
+      [
+       70.32,
+       -16.58,
+       -28.68
+      ],
+      [
+       71.55,
+       -21.72,
+       -28.95
+      ],
+      [
+       71.44,
+       -21.28,
+       -37.34
+      ],
+      [
+       73.55,
+       -18.79,
+       -30.13
+      ],
+      [
+       70.32,
+       -16.26,
+       -34.67
+      ],
+      [
+       70.43,
+       -18.79,
+       -39.21
+      ],
+      [
+       70.28,
+       -21.42,
+       -33.14
+      ],
+      [
+       71.55,
+       -16.88,
+       -32.03
+      ],
+      [
+       72.09,
+       -20.58,
+       -31.56
+      ],
+      [
+       71.55,
+       -18.76,
+       -41.41
+      ],
+      [
+       73.55,
+       -17.92,
+       -32.75
+      ],
+      [
+       71.35,
+       -18.99,
+       -37.02
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.42,
+      -3.55,
+      -32.78
+     ],
+     "normal": [
+      -0.992,
+      0.095,
+      0.081
+     ],
+     "insert": [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.14,
+      3.53,
+      1.71
+     ],
+     "area": 101.3,
+     "n_pts": 331,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       71.55,
+       -3.33,
+       -32.66
+      ],
+      [
+       70.51,
+       -0.53,
+       -40.45
+      ],
+      [
+       70.32,
+       -6.28,
+       -28.14
+      ],
+      [
+       71.55,
+       -1.14,
+       -27.87
+      ],
+      [
+       71.32,
+       -0.7,
+       -36.26
+      ],
+      [
+       73.55,
+       -4.73,
+       -28.06
+      ],
+      [
+       70.32,
+       -5.97,
+       -34.13
+      ],
+      [
+       70.43,
+       -2.98,
+       -38.38
+      ],
+      [
+       73.42,
+       -2.26,
+       -30.6
+      ],
+      [
+       70.28,
+       -1.0,
+       -32.07
+      ],
+      [
+       71.55,
+       -5.63,
+       -31.44
+      ],
+      [
+       71.55,
+       -2.78,
+       -40.57
+      ],
+      [
+       73.55,
+       -4.53,
+       -32.05
+      ],
+      [
+       71.45,
+       -3.01,
+       -36.18
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Inner Hub B 2|Front Wheel Inner Hub A 2": {
+   "a": "Front Wheel Inner Hub B 2",
+   "b": "Front Wheel Inner Hub A 2",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      72.74,
+      -18.78,
+      -32.88
+     ],
+     "normal": [
+      -0.995,
+      -0.057,
+      0.076
+     ],
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.12,
+      3.86,
+      1.6
+     ],
+     "area": 110.6,
+     "n_pts": 480,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       72.26,
+       -18.63,
+       -32.79
+      ],
+      [
+       71.56,
+       -21.06,
+       -41.53
+      ],
+      [
+       74.97,
+       -21.14,
+       -28.92
+      ],
+      [
+       74.17,
+       -16.03,
+       -28.65
+      ],
+      [
+       73.17,
+       -21.16,
+       -37.33
+      ],
+      [
+       75.08,
+       -20.88,
+       -33.11
+      ],
+      [
+       71.56,
+       -21.05,
+       -30.25
+      ],
+      [
+       74.1,
+       -15.86,
+       -32.65
+      ],
+      [
+       71.76,
+       -18.87,
+       -39.21
+      ],
+      [
+       71.56,
+       -17.25,
+       -30.05
+      ],
+      [
+       71.56,
+       -21.13,
+       -34.46
+      ],
+      [
+       71.56,
+       -16.41,
+       -34.68
+      ],
+      [
+       73.08,
+       -18.61,
+       -41.4
+      ],
+      [
+       73.66,
+       -19.53,
+       -30.17
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      72.73,
+      -3.62,
+      -32.11
+     ],
+     "normal": [
+      -0.995,
+      0.061,
+      0.08
+     ],
+     "insert": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      9.11,
+      3.85,
+      1.59
+     ],
+     "area": 110.0,
+     "n_pts": 475,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       72.96,
+       -3.96,
+       -32.02
+      ],
+      [
+       71.56,
+       -0.48,
+       -40.45
+      ],
+      [
+       71.56,
+       -1.14,
+       -27.87
+      ],
+      [
+       73.95,
+       -6.71,
+       -28.16
+      ],
+      [
+       73.17,
+       -0.82,
+       -36.26
+      ],
+      [
+       75.07,
+       -2.95,
+       -27.96
+      ],
+      [
+       71.56,
+       -1.15,
+       -33.41
+      ],
+      [
+       75.08,
+       -1.54,
+       -32.1
+      ],
+      [
+       71.96,
+       -2.91,
+       -38.38
+      ],
+      [
+       71.56,
+       -5.82,
+       -34.12
+      ],
+      [
+       71.72,
+       -6.04,
+       -30.13
+      ],
+      [
+       74.24,
+       -6.66,
+       -32.16
+      ],
+      [
+       72.65,
+       -1.9,
+       -30.58
+      ],
+      [
+       73.08,
+       -2.93,
+       -40.58
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Hub 1|Front Wheel Inner Hub A 1": {
+   "a": "Front Wheel Hub 1",
+   "b": "Front Wheel Inner Hub A 1",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      65.5,
+      -12.07,
+      29.01
+     ],
+     "normal": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.19,
+      8.54,
+      0.0
+     ],
+     "area": 434.2,
+     "n_pts": 1474,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       66.45,
+       -20.65,
+       29.01
+      ],
+      [
+       69.75,
+       -21.36,
+       29.01
+      ],
+      [
+       73.94,
+       -21.22,
+       29.01
+      ],
+      [
+       74.62,
+       -21.03,
+       29.01
+      ],
+      [
+       74.62,
+       -1.17,
+       29.01
+      ],
+      [
+       71.5,
+       -0.69,
+       29.01
+      ],
+      [
+       67.07,
+       -1.68,
+       29.01
+      ],
+      [
+       64.46,
+       -3.44,
+       29.01
+      ],
+      [
+       61.57,
+       -5.08,
+       29.01
+      ],
+      [
+       60.27,
+       -8.16,
+       29.01
+      ],
+      [
+       59.89,
+       -11.1,
+       29.01
+      ],
+      [
+       60.27,
+       -14.04,
+       29.01
+      ],
+      [
+       61.57,
+       -17.12,
+       29.01
+      ],
+      [
+       63.42,
+       -19.44,
+       29.01
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      65.72,
+      -10.1,
+      35.25
+     ],
+     "normal": [
+      -0.052,
+      0.001,
+      -0.999
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      15.85,
+      8.42,
+      3.64
+     ],
+     "area": 419.3,
+     "n_pts": 282,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       65.08,
+       -19.29,
+       33.21
+      ],
+      [
+       68.16,
+       -20.96,
+       33.21
+      ],
+      [
+       73.36,
+       -21.34,
+       33.21
+      ],
+      [
+       74.84,
+       -20.96,
+       33.21
+      ],
+      [
+       74.73,
+       -1.21,
+       33.21
+      ],
+      [
+       72.44,
+       -0.73,
+       33.21
+      ],
+      [
+       68.61,
+       -1.1,
+       33.21
+      ],
+      [
+       65.27,
+       -1.3,
+       35.44
+      ],
+      [
+       62.74,
+       -3.48,
+       35.44
+      ],
+      [
+       61.1,
+       -5.95,
+       35.44
+      ],
+      [
+       60.13,
+       -8.76,
+       35.44
+      ],
+      [
+       59.94,
+       -12.09,
+       35.44
+      ],
+      [
+       60.16,
+       -13.56,
+       35.44
+      ],
+      [
+       62.99,
+       -17.09,
+       37.41
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      65.29,
+      -11.1,
+      41.64
+     ],
+     "normal": [
+      0.001,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      15.41,
+      7.38,
+      0.17
+     ],
+     "area": 357.1,
+     "n_pts": 794,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       65.27,
+       -19.44,
+       41.61
+      ],
+      [
+       67.26,
+       -20.39,
+       41.61
+      ],
+      [
+       71.03,
+       -21.43,
+       41.61
+      ],
+      [
+       72.55,
+       -21.46,
+       41.61
+      ],
+      [
+       72.55,
+       -0.74,
+       41.61
+      ],
+      [
+       69.33,
+       -1.52,
+       41.61
+      ],
+      [
+       67.94,
+       -1.61,
+       41.61
+      ],
+      [
+       64.99,
+       -2.98,
+       41.61
+      ],
+      [
+       62.12,
+       -4.26,
+       41.86
+      ],
+      [
+       60.69,
+       -6.86,
+       41.86
+      ],
+      [
+       59.97,
+       -9.74,
+       41.86
+      ],
+      [
+       60.0,
+       -12.71,
+       41.86
+      ],
+      [
+       60.79,
+       -15.57,
+       41.86
+      ],
+      [
+       62.27,
+       -18.14,
+       41.86
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Wheel Hub 2|Front Wheel Inner Hub A 2": {
+   "a": "Front Wheel Hub 2",
+   "b": "Front Wheel Inner Hub A 2",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      65.5,
+      -12.06,
+      -29.01
+     ],
+     "normal": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.2,
+      8.53,
+      0.0
+     ],
+     "area": 434.2,
+     "n_pts": 1473,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       66.45,
+       -20.65,
+       -29.01
+      ],
+      [
+       69.75,
+       -21.36,
+       -29.01
+      ],
+      [
+       73.94,
+       -21.22,
+       -29.01
+      ],
+      [
+       74.62,
+       -21.03,
+       -29.01
+      ],
+      [
+       74.62,
+       -1.17,
+       -29.01
+      ],
+      [
+       71.5,
+       -0.69,
+       -29.01
+      ],
+      [
+       67.4,
+       -1.53,
+       -29.01
+      ],
+      [
+       64.46,
+       -3.44,
+       -29.01
+      ],
+      [
+       61.57,
+       -5.08,
+       -29.01
+      ],
+      [
+       60.27,
+       -8.16,
+       -29.01
+      ],
+      [
+       59.89,
+       -11.1,
+       -29.01
+      ],
+      [
+       60.27,
+       -14.04,
+       -29.01
+      ],
+      [
+       61.57,
+       -17.12,
+       -29.01
+      ],
+      [
+       63.42,
+       -19.44,
+       -29.01
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      65.38,
+      -11.01,
+      -35.25
+     ],
+     "normal": [
+      0.063,
+      0.003,
+      -0.998
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      15.81,
+      8.22,
+      3.46
+     ],
+     "area": 408.4,
+     "n_pts": 306,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       64.66,
+       -1.72,
+       -35.44
+      ],
+      [
+       68.27,
+       -1.21,
+       -33.21
+      ],
+      [
+       71.97,
+       -0.7,
+       -33.21
+      ],
+      [
+       74.73,
+       -1.21,
+       -33.21
+      ],
+      [
+       74.84,
+       -20.96,
+       -33.21
+      ],
+      [
+       72.09,
+       -21.49,
+       -33.21
+      ],
+      [
+       68.16,
+       -20.96,
+       -33.21
+      ],
+      [
+       64.66,
+       -20.48,
+       -35.44
+      ],
+      [
+       62.27,
+       -18.14,
+       -35.44
+      ],
+      [
+       60.79,
+       -15.57,
+       -35.44
+      ],
+      [
+       60.0,
+       -12.71,
+       -35.44
+      ],
+      [
+       60.0,
+       -9.49,
+       -35.44
+      ],
+      [
+       60.79,
+       -6.63,
+       -35.44
+      ],
+      [
+       62.27,
+       -4.06,
+       -35.44
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      65.28,
+      -11.05,
+      -41.64
+     ],
+     "normal": [
+      0.001,
+      -0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      15.42,
+      7.32,
+      0.17
+     ],
+     "area": 354.6,
+     "n_pts": 793,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       65.11,
+       -19.26,
+       -41.61
+      ],
+      [
+       67.02,
+       -20.08,
+       -41.61
+      ],
+      [
+       71.97,
+       -21.43,
+       -41.61
+      ],
+      [
+       64.67,
+       -11.99,
+       -41.61
+      ],
+      [
+       65.23,
+       -6.46,
+       -41.61
+      ],
+      [
+       71.85,
+       -0.77,
+       -41.61
+      ],
+      [
+       67.72,
+       -1.41,
+       -41.61
+      ],
+      [
+       65.09,
+       -2.91,
+       -41.61
+      ],
+      [
+       62.12,
+       -4.26,
+       -41.86
+      ],
+      [
+       60.69,
+       -6.86,
+       -41.86
+      ],
+      [
+       59.97,
+       -9.74,
+       -41.86
+      ],
+      [
+       59.97,
+       -12.46,
+       -41.86
+      ],
+      [
+       60.69,
+       -15.34,
+       -41.86
+      ],
+      [
+       62.12,
+       -17.94,
+       -41.86
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Tyre L|Front Wheel Hub 1": {
+   "a": "Front Tyre L",
+   "b": "Front Wheel Hub 1",
+   "kind": "press",
+   "patches": [
+    {
+     "centroid": [
+      71.66,
+      -10.64,
+      48.11
+     ],
+     "normal": [
+      -0.0,
+      -0.001,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      18.28,
+      17.62,
+      0.25
+     ],
+     "area": 1011.8,
+     "n_pts": 5341,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       84.0,
+       -14.11,
+       48.08
+      ],
+      [
+       81.23,
+       -18.88,
+       48.15
+      ],
+      [
+       76.74,
+       -22.4,
+       48.15
+      ],
+      [
+       71.19,
+       -23.55,
+       48.15
+      ],
+      [
+       65.35,
+       -21.93,
+       48.15
+      ],
+      [
+       61.17,
+       -18.07,
+       48.15
+      ],
+      [
+       59.18,
+       -12.94,
+       48.15
+      ],
+      [
+       59.26,
+       -7.15,
+       48.08
+      ],
+      [
+       62.12,
+       -2.3,
+       48.08
+      ],
+      [
+       66.71,
+       1.26,
+       48.0
+      ],
+      [
+       72.22,
+       1.94,
+       48.04
+      ],
+      [
+       77.75,
+       0.59,
+       48.0
+      ],
+      [
+       82.11,
+       -3.15,
+       48.0
+      ],
+      [
+       84.29,
+       -8.47,
+       48.04
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.55,
+      -11.02,
+      29.01
+     ],
+     "normal": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.83,
+      16.63,
+      0.0
+     ],
+     "area": 878.9,
+     "n_pts": 1373,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       59.9,
+       -9.98,
+       29.01
+      ],
+      [
+       60.56,
+       -15.13,
+       29.01
+      ],
+      [
+       63.39,
+       -19.48,
+       29.01
+      ],
+      [
+       67.83,
+       -22.16,
+       29.01
+      ],
+      [
+       73.36,
+       -22.61,
+       29.01
+      ],
+      [
+       78.17,
+       -20.66,
+       29.01
+      ],
+      [
+       81.66,
+       -16.82,
+       29.01
+      ],
+      [
+       83.13,
+       -11.85,
+       29.01
+      ],
+      [
+       82.31,
+       -6.72,
+       29.01
+      ],
+      [
+       79.61,
+       -2.73,
+       29.01
+      ],
+      [
+       75.17,
+       -0.04,
+       29.01
+      ],
+      [
+       70.01,
+       0.46,
+       29.01
+      ],
+      [
+       65.14,
+       -1.33,
+       29.01
+      ],
+      [
+       61.53,
+       -5.06,
+       29.01
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.52,
+      -11.0,
+      35.44
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.66,
+      16.39,
+      0.0
+     ],
+     "area": 858.2,
+     "n_pts": 190,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       61.25,
+       -16.66,
+       35.44
+      ],
+      [
+       59.86,
+       -11.67,
+       35.44
+      ],
+      [
+       60.78,
+       -6.53,
+       35.44
+      ],
+      [
+       63.49,
+       -2.63,
+       35.44
+      ],
+      [
+       68.33,
+       0.12,
+       35.44
+      ],
+      [
+       73.18,
+       0.44,
+       35.44
+      ],
+      [
+       78.04,
+       -1.45,
+       35.44
+      ],
+      [
+       81.59,
+       -5.26,
+       35.44
+      ],
+      [
+       83.12,
+       -10.12,
+       35.44
+      ],
+      [
+       82.37,
+       -15.32,
+       35.44
+      ],
+      [
+       79.48,
+       -19.6,
+       35.44
+      ],
+      [
+       75.01,
+       -22.22,
+       35.44
+      ],
+      [
+       69.8,
+       -22.63,
+       35.44
+      ],
+      [
+       64.95,
+       -20.75,
+       35.44
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Tyre R|Front Wheel Hub 2": {
+   "a": "Front Tyre R",
+   "b": "Front Wheel Hub 2",
+   "kind": "press",
+   "patches": [
+    {
+     "centroid": [
+      71.76,
+      -10.68,
+      -48.1
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      18.26,
+      17.66,
+      0.25
+     ],
+     "area": 1013.2,
+     "n_pts": 5381,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       59.24,
+       -8.89,
+       -48.15
+      ],
+      [
+       59.53,
+       -14.55,
+       -48.15
+      ],
+      [
+       62.39,
+       -19.6,
+       -48.15
+      ],
+      [
+       67.35,
+       -22.85,
+       -48.15
+      ],
+      [
+       73.0,
+       -23.47,
+       -48.15
+      ],
+      [
+       78.26,
+       -21.56,
+       -48.15
+      ],
+      [
+       82.47,
+       -17.8,
+       -48.08
+      ],
+      [
+       84.5,
+       -12.36,
+       -48.04
+      ],
+      [
+       83.88,
+       -6.94,
+       -48.04
+      ],
+      [
+       81.09,
+       -1.94,
+       -48.0
+      ],
+      [
+       76.27,
+       0.84,
+       -48.08
+      ],
+      [
+       70.78,
+       1.94,
+       -48.04
+      ],
+      [
+       65.2,
+       0.34,
+       -48.04
+      ],
+      [
+       60.99,
+       -3.69,
+       -48.08
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.6,
+      -11.02,
+      -29.01
+     ],
+     "normal": [
+      -0.0,
+      -0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.83,
+      16.62,
+      0.0
+     ],
+     "area": 879.0,
+     "n_pts": 1374,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       83.15,
+       -11.47,
+       -29.01
+      ],
+      [
+       81.84,
+       -16.49,
+       -29.01
+      ],
+      [
+       78.47,
+       -20.44,
+       -29.01
+      ],
+      [
+       73.73,
+       -22.54,
+       -29.01
+      ],
+      [
+       68.18,
+       -22.28,
+       -29.01
+      ],
+      [
+       63.66,
+       -19.73,
+       -29.01
+      ],
+      [
+       60.69,
+       -15.48,
+       -29.01
+      ],
+      [
+       59.87,
+       -10.35,
+       -29.01
+      ],
+      [
+       61.34,
+       -5.38,
+       -29.01
+      ],
+      [
+       64.83,
+       -1.54,
+       -29.01
+      ],
+      [
+       69.64,
+       0.41,
+       -29.01
+      ],
+      [
+       74.82,
+       0.08,
+       -29.01
+      ],
+      [
+       79.34,
+       -2.47,
+       -29.01
+      ],
+      [
+       82.31,
+       -6.72,
+       -29.01
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      71.48,
+      -11.0,
+      -35.44
+     ],
+     "normal": [
+      0.0,
+      -0.0,
+      -1.0
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "face",
+     "extent": [
+      16.66,
+      16.39,
+      0.0
+     ],
+     "area": 858.2,
+     "n_pts": 190,
+     "how": "thin even coat over the whole face",
+     "marks": [
+      [
+       81.75,
+       -16.66,
+       -35.44
+      ],
+      [
+       83.14,
+       -11.67,
+       -35.44
+      ],
+      [
+       82.22,
+       -6.53,
+       -35.44
+      ],
+      [
+       79.51,
+       -2.63,
+       -35.44
+      ],
+      [
+       74.67,
+       0.12,
+       -35.44
+      ],
+      [
+       69.82,
+       0.44,
+       -35.44
+      ],
+      [
+       64.96,
+       -1.45,
+       -35.44
+      ],
+      [
+       61.41,
+       -5.26,
+       -35.44
+      ],
+      [
+       59.88,
+       -10.12,
+       -35.44
+      ],
+      [
+       60.63,
+       -15.32,
+       -35.44
+      ],
+      [
+       63.52,
+       -19.6,
+       -35.44
+      ],
+      [
+       67.99,
+       -22.22,
+       -35.44
+      ],
+      [
+       73.2,
+       -22.63,
+       -35.44
+      ],
+      [
+       78.05,
+       -20.75,
+       -35.44
+      ]
+     ]
+    }
+   ]
+  },
+  "Side Camera Mount|Mid Body": {
+   "a": "Side Camera Mount",
+   "b": "Mid Body",
+   "kind": "glue",
+   "manual": true,
+   "patches": [
+    {
+     "centroid": [
+      -30.32,
+      16.48,
+      6.0
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "slot",
+     "extent": [
+      2.5,
+      2,
+      2
+     ],
+     "area": 20,
+     "n_pts": 0,
+     "how": "one drop in the locating hole",
+     "marks": [
+      [
+       -32.82,
+       16.48,
+       6.0
+      ],
+      [
+       -30.32,
+       16.48,
+       6.0
+      ],
+      [
+       -27.82,
+       16.48,
+       6.0
+      ]
+     ]
+    }
+   ]
+  },
+  "Side Camera Mount 2|Mid Body": {
+   "a": "Side Camera Mount 2",
+   "b": "Mid Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -28.59,
+      18.57,
+      -4.57
+     ],
+     "normal": [
+      0.021,
+      -0.995,
+      0.093
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     "joint": "shaft",
+     "extent": [
+      3.92,
+      1.68,
+      1.26
+     ],
+     "area": 20.6,
+     "n_pts": 344,
+     "how": "thin ring of glue around the contact",
+     "marks": [
+      [
+       -28.48,
+       18.78,
+       -4.25
+      ],
+      [
+       -33.68,
+       18.53,
+       -6.75
+      ],
+      [
+       -30.13,
+       17.8,
+       -6.75
+      ],
+      [
+       -31.77,
+       18.66,
+       -4.25
+      ],
+      [
+       -27.05,
+       18.07,
+       -6.75
+      ],
+      [
+       -31.77,
+       18.94,
+       -6.75
+      ],
+      [
+       -33.68,
+       18.32,
+       -4.25
+      ],
+      [
+       -29.03,
+       19.28,
+       -6.75
+      ],
+      [
+       -30.13,
+       18.73,
+       -4.25
+      ],
+      [
+       -27.02,
+       18.13,
+       -4.25
+      ],
+      [
+       -27.59,
+       19.34,
+       -6.75
+      ],
+      [
+       -28.2,
+       17.61,
+       -6.75
+      ],
+      [
+       -27.43,
+       19.28,
+       -4.25
+      ],
+      [
+       -28.75,
+       17.66,
+       -4.25
+      ]
+     ]
+    }
+   ]
+  },
+  "Top Camera Mount|Mid Body": {
+   "a": "Top Camera Mount",
+   "b": "Mid Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -26.56,
+      23.6,
+      -0.72
+     ],
+     "normal": [
+      0.051,
+      0.998,
+      -0.023
+     ],
+     "insert": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "joint": "shaft",
+     "extent": [
+      6.98,
+      0.95,
+      0.92
+     ],
+     "area": 20.8,
+     "n_pts": 75,
+     "how": "thin bead along the line of contact",
+     "marks": [
+      [
+       -30.04,
+       23.68,
+       -0.84
+      ],
+      [
+       -30.02,
+       23.89,
+       -0.18
+      ],
+      [
+       -28.83,
+       24.68,
+       -0.21
+      ],
+      [
+       -26.44,
+       24.34,
+       -0.23
+      ],
+      [
+       -26.44,
+       24.34,
+       -0.23
+      ],
+      [
+       -24.03,
+       24.41,
+       -0.25
+      ],
+      [
+       -22.81,
+       23.48,
+       -0.25
+      ],
+      [
+       -22.83,
+       23.27,
+       -0.57
+      ],
+      [
+       -22.82,
+       23.46,
+       -1.25
+      ],
+      [
+       -24.04,
+       24.39,
+       -1.25
+      ],
+      [
+       -26.45,
+       24.32,
+       -1.23
+      ],
+      [
+       -26.45,
+       24.32,
+       -1.23
+      ],
+      [
+       -28.84,
+       24.66,
+       -1.21
+      ],
+      [
+       -30.03,
+       23.87,
+       -1.18
+      ]
+     ]
+    }
+   ]
+  },
+  "Halo|Mid Body": {
+   "a": "Halo",
+   "b": "Mid Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -24.13,
+      9.31,
+      13.58
+     ],
+     "normal": [
+      -0.012,
+      -0.166,
+      -0.986
+     ],
+     "insert": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      11.34,
+      2.44,
+      1.25
+     ],
+     "area": 86.7,
+     "n_pts": 23136,
+     "how": "thin bead along the line of contact",
+     "marks": [
+      [
+       -24.19,
+       9.25,
+       12.58
+      ],
+      [
+       -4.11,
+       7.02,
+       15.19
+      ],
+      [
+       -13.48,
+       11.14,
+       12.98
+      ],
+      [
+       -31.59,
+       6.84,
+       13.79
+      ],
+      [
+       -18.8,
+       6.92,
+       13.86
+      ],
+      [
+       -9.92,
+       6.98,
+       14.82
+      ],
+      [
+       -28.23,
+       9.89,
+       14.82
+      ],
+      [
+       -20.01,
+       11.24,
+       12.71
+      ],
+      [
+       -24.86,
+       6.88,
+       15.85
+      ],
+      [
+       -22.64,
+       10.97,
+       15.84
+      ],
+      [
+       -16.42,
+       9.22,
+       15.83
+      ],
+      [
+       -27.3,
+       6.86,
+       12.62
+      ],
+      [
+       -7.92,
+       10.09,
+       14.32
+      ],
+      [
+       -16.76,
+       10.72,
+       12.78
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      -26.01,
+      9.36,
+      -13.95
+     ],
+     "normal": [
+      0.036,
+      0.107,
+      -0.994
+     ],
+     "insert": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      10.71,
+      2.24,
+      1.28
+     ],
+     "area": 75.4,
+     "n_pts": 19659,
+     "how": "thin bead along the line of contact",
+     "marks": [
+      [
+       -25.93,
+       9.46,
+       -12.98
+      ],
+      [
+       -4.16,
+       7.0,
+       -15.17
+      ],
+      [
+       -15.54,
+       11.11,
+       -13.15
+      ],
+      [
+       -31.63,
+       6.82,
+       -14.22
+      ],
+      [
+       -20.27,
+       6.9,
+       -13.46
+      ],
+      [
+       -9.04,
+       9.79,
+       -14.29
+      ],
+      [
+       -21.7,
+       11.22,
+       -13.35
+      ],
+      [
+       -27.65,
+       6.85,
+       -15.45
+      ],
+      [
+       -29.5,
+       10.07,
+       -14.34
+      ],
+      [
+       -23.84,
+       6.87,
+       -13.89
+      ],
+      [
+       -18.59,
+       9.81,
+       -14.07
+      ],
+      [
+       -5.44,
+       10.1,
+       -15.55
+      ],
+      [
+       -12.16,
+       11.07,
+       -14.13
+      ],
+      [
+       -24.94,
+       10.96,
+       -15.51
+      ]
+     ]
+    },
+    {
+     "centroid": [
+      25.76,
+      7.97,
+      -0.13
+     ],
+     "normal": [
+      0.152,
+      0.958,
+      0.245
+     ],
+     "insert": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "joint": "shaft",
+     "extent": [
+      4.21,
+      1.17,
+      1.07
+     ],
+     "area": 15.5,
+     "n_pts": 3087,
+     "how": "thin bead along the line of contact",
+     "marks": [
+      [
+       25.74,
+       8.24,
+       0.46
+      ],
+      [
+       30.63,
+       7.24,
+       -0.3
+      ],
+      [
+       23.23,
+       9.25,
+       -1.03
+      ],
+      [
+       28.44,
+       9.19,
+       -0.67
+      ],
+      [
+       27.36,
+       7.22,
+       -0.94
+      ],
+      [
+       28.81,
+       7.23,
+       0.19
+      ],
+      [
+       24.65,
+       8.08,
+       -1.0
+      ],
+      [
+       24.04,
+       8.83,
+       0.54
+      ],
+      [
+       26.36,
+       8.91,
+       -0.9
+      ],
+      [
+       27.4,
+       8.37,
+       0.27
+      ],
+      [
+       29.76,
+       8.63,
+       -0.17
+      ],
+      [
+       25.86,
+       7.31,
+       -1.02
+      ],
+      [
+       26.67,
+       7.24,
+       0.41
+      ],
+      [
+       25.01,
+       7.2,
+       -0.04
+      ]
+     ]
+    }
+   ]
+  },
+  "Rear Stabiliser Fin|Mid Body": {
+   "a": "Rear Stabiliser Fin",
+   "b": "Mid Body",
+   "kind": "glue",
+   "patches": [
+    {
+     "centroid": [
+      -75.09,
+      14.18,
+      0.7
+     ],
+     "normal": [
+      0.0,
+      -0.001,
+      1.0
+     ],
+     "insert": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "joint": "face",
+     "extent": [
+      8.38,
+      1.43,
+      0.61
+     ],
+     "area": 37.8,
+     "n_pts": 278,
+     "how": "thin bead along the line of contact",
+     "marks": [
+      [
+       -75.15,
+       14.5,
+       0.7
+      ],
+      [
+       -86.35,
+       10.82,
+       1.05
+      ],
+      [
+       -80.69,
+       13.64,
+       0.82
+      ],
+      [
+       -69.78,
+       13.55,
+       1.05
+      ],
+      [
+       -82.83,
+       11.07,
+       0.35
+      ],
+      [
+       -79.07,
+       11.08,
+       0.35
+      ],
+      [
+       -72.26,
+       15.08,
+       0.47
+      ],
+      [
+       -77.89,
+       14.0,
+       0.82
+      ],
+      [
+       -70.5,
+       15.4,
+       1.05
+      ],
+      [
+       -84.6,
+       10.89,
+       0.35
+      ],
+      [
+       -73.36,
+       14.18,
+       1.05
+      ],
+      [
+       -76.53,
+       14.24,
+       0.35
+      ],
+      [
+       -79.35,
+       13.79,
+       0.82
+      ],
+      [
+       -81.86,
+       11.22,
+       1.05
+      ]
+     ]
+    }
+   ]
+  },
+  "Front Mini-Wing|Front Body": {
+   "a": "Front Mini-Wing",
+   "b": "Front Body",
+   "kind": "glue",
+   "manual": true,
+   "patches": [
+    {
+     "centroid": [
+      90.13,
+      -6.12,
+      -0.25
+     ],
+     "normal": [
+      0,
+      0,
+      1
+     ],
+     "insert": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "joint": "slot",
+     "extent": [
+      12,
+      2,
+      2
+     ],
+     "area": 30,
+     "n_pts": 0,
+     "how": "one small drop in the slot, then slide it through",
+     "marks": [
+      [
+       90.13,
+       -6.12,
+       -12.25
+      ],
+      [
+       90.13,
+       -6.12,
+       -6.25
+      ],
+      [
+       90.13,
+       -6.12,
+       -0.25
+      ],
+      [
+       90.13,
+       -6.12,
+       5.75
+      ],
+      [
+       90.13,
+       -6.12,
+       11.75
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}

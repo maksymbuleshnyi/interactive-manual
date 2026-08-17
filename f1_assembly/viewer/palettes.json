@@ -1,0 +1,104 @@
+{
+ "palettes": [
+  {
+   "id": "papaya",
+   "name": "Papaya",
+   "body": "#2b2d31",
+   "accent": "#e8621f",
+   "hub": "#3a3d42",
+   "tyre": "#131316",
+   "wood": "#6d4a2e",
+   "finish": "satin"
+  },
+  {
+   "id": "midnight",
+   "name": "Midnight Red",
+   "body": "#16244c",
+   "accent": "#d92240",
+   "hub": "#39404f",
+   "tyre": "#131316",
+   "wood": "#5e4530",
+   "finish": "gloss"
+  },
+  {
+   "id": "british",
+   "name": "Racing Green",
+   "body": "#133a2b",
+   "accent": "#d8b24a",
+   "hub": "#33413a",
+   "tyre": "#131316",
+   "wood": "#6b4a2c",
+   "finish": "gloss"
+  },
+  {
+   "id": "silver",
+   "name": "Silver Arrow",
+   "body": "#b7bdc4",
+   "accent": "#12b0a6",
+   "hub": "#8f969e",
+   "tyre": "#131316",
+   "wood": "#7a5636",
+   "finish": "metal"
+  },
+  {
+   "id": "stealth",
+   "name": "Stealth",
+   "body": "#17181b",
+   "accent": "#6f7580",
+   "hub": "#2a2d33",
+   "tyre": "#101013",
+   "wood": "#4f3a26",
+   "finish": "matte"
+  },
+  {
+   "id": "ivory",
+   "name": "Ivory Classic",
+   "body": "#ded7c9",
+   "accent": "#7b1f2b",
+   "hub": "#a49c8c",
+   "tyre": "#141416",
+   "wood": "#79542f",
+   "finish": "satin"
+  },
+  {
+   "id": "cyan",
+   "name": "Cyan Works",
+   "body": "#1c6a8a",
+   "accent": "#f0f2ee",
+   "hub": "#31536a",
+   "tyre": "#131316",
+   "wood": "#6d4a2e",
+   "finish": "gloss"
+  },
+  {
+   "id": "magma",
+   "name": "Magma",
+   "body": "#33141a",
+   "accent": "#ff7a18",
+   "hub": "#3d2a28",
+   "tyre": "#131316",
+   "wood": "#5b3f28",
+   "finish": "satin"
+  }
+ ],
+ "states": [
+  {
+   "id": "loose",
+   "label": "straight off the print bed",
+   "upto": -1,
+   "step": 1
+  },
+  {
+   "id": "body",
+   "label": "body joined, wheels to go",
+   "upto": 6,
+   "step": 7
+  },
+  {
+   "id": "rolling",
+   "label": "rolling chassis, details left",
+   "upto": 13,
+   "step": 14
+  }
+ ]
+}
