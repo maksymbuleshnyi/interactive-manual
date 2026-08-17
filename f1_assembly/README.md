@@ -33,30 +33,29 @@ filling in geometry, not just shading it. Full clip: [`docs/manual_demo.mp4`](do
 | `renderer/render_video.py` | replays a captured interaction through a checkpoint, side by side with the truth |
 | `renderer/eval_memory.py` | paired A/B measuring whether the memory channels are used at all |
 
-## What you must supply
+## What is and is not in the repo
 
-The repo holds the code and the derived geometry (registered poses, contact
-patches, the step list), but **not the CAD, the decals or the training data**.
-To reproduce from scratch you need:
+The CAD **is** included: the 24 part STLs the viewer loads sit in
+`viewer/Separate STLs/` and `viewer/tyres/`, so the manual runs as soon as you
+clone. They are a third-party 3D printed kit, redistributed here for research
+reproducibility.
 
-| what | where it goes | note |
+Not included, and why:
+
+| what | effect | note |
 | --- | --- | --- |
-| the kit STLs, 27 files | `viewer/Separate STLs/` | third-party model, not redistributed here. The exact filenames are in `viewer_manifest.json`, under each part's `file` key |
-| the assembled reference STL, `2025+F1+Car+STL+Assembly (1).stl` | next to the geometry scripts | only needed to re-run `geometry/register_parts.py`. Its output is already committed as `viewer/registration.json`, so you can skip this |
-| `Tyres.stl` | next to the other STLs | `geometry/assemble.py` slices it into `tyre_q*.stl` |
-| decal images `d*.png` | `viewer/decals/` | optional, cut from a real livery sheet and not redistributed. Decals are off by default, so the manual runs without them |
-| `grounding/index.json` and its images | `viewer/grounding/` | optional grounding chooser. The fetch is wrapped in try/catch, so its absence only removes the picker |
-
-Without the STLs the right-hand photographic scene cannot render, and since
-that scene is the training target, nothing downstream works. Everything else
-degrades gracefully.
-
-The training data is deliberately not in the repo (about 2GB). The capture
-harness regenerates it from the manual in roughly 45 minutes. Trained
-checkpoints are not included either.
+| the training data, ~2GB | none | the capture harness regenerates it from the manual in ~45 minutes |
+| trained checkpoints | none | retrain, ~1 hour |
+| the assembled reference STL, 40MB | none | only needed to re-run `geometry/register_parts.py`, and its output is already committed as `viewer/registration.json` |
+| decal images | decals unavailable | cut from a real livery sheet; off by default (`decalsOn = false`) |
+| `grounding/index.json` and images | the grounding chooser disappears | the fetch is wrapped in try/catch |
 
 Python dependencies are in `requirements.txt`. The viewer loads three.js r160
 from unpkg, so the browser needs network access.
+
+Step by step instructions, with a verification check at each stage, are in
+[`docs/REPRODUCE.md`](docs/REPRODUCE.md). What was learned building it, and
+which of it generalises, is in [`docs/INSIGHTS.md`](docs/INSIGHTS.md).
 
 ## The renderer
 

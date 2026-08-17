@@ -761,7 +761,7 @@
    ]
   },
   "Rear Tyre L": {
-   "file": "f1_manual/tyre_q0.stl",
+   "file": "tyres/tyre_q0.stl",
    "matrix": [
     [
      0.0,
@@ -801,7 +801,7 @@
    ]
   },
   "Rear Tyre R": {
-   "file": "f1_manual/tyre_q1.stl",
+   "file": "tyres/tyre_q1.stl",
    "matrix": [
     [
      0.0,
@@ -921,7 +921,7 @@
    ]
   },
   "Front Tyre L": {
-   "file": "f1_manual/tyre_q2.stl",
+   "file": "tyres/tyre_q2.stl",
    "matrix": [
     [
      0.0,
@@ -961,7 +961,7 @@
    ]
   },
   "Front Tyre R": {
-   "file": "f1_manual/tyre_q3.stl",
+   "file": "tyres/tyre_q3.stl",
    "matrix": [
     [
      0.0,

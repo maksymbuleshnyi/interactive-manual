@@ -34,5 +34,4 @@ logs/runs/*/stderr.log
 # F1 assembly: captured data, checkpoints and heavy source assets
 f1_assembly/**/traindata/
 f1_assembly/**/frames/
-f1_assembly/**/*.stl
 f1_assembly/**/memory_cn*/
