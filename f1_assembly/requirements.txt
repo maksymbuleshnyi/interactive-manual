@@ -1,0 +1,23 @@
+# Renderer: training, serving and offline playback.
+# Tested on CUDA with torch 2.13 / bf16. The trainer needs ~20GB at
+# --bs 8 --res 384; serving needs ~8GB.
+torch>=2.1
+diffusers>=0.27
+transformers>=4.38
+accelerate>=0.27
+peft>=0.9              # required for --fast (LCM few-step) and any LoRA
+safetensors
+numpy
+pillow
+
+# Serving
+fastapi
+uvicorn[standard]
+websockets
+
+# Geometry: registration of the separate STLs into the assembled reference
+trimesh
+scipy
+
+# ffmpeg is called out to for video encoding (render_video.py, and the
+# periodic clips during training). Without it they fall back to a GIF.

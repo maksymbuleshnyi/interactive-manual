@@ -33,8 +33,30 @@ filling in geometry, not just shading it. Full clip: [`docs/manual_demo.mp4`](do
 | `renderer/render_video.py` | replays a captured interaction through a checkpoint, side by side with the truth |
 | `renderer/eval_memory.py` | paired A/B measuring whether the memory channels are used at all |
 
-The STLs and the training data are not in the repo. The capture harness
-regenerates the data from the manual in about 45 minutes.
+## What you must supply
+
+The repo holds the code and the derived geometry (registered poses, contact
+patches, the step list), but **not the CAD, the decals or the training data**.
+To reproduce from scratch you need:
+
+| what | where it goes | note |
+| --- | --- | --- |
+| the kit STLs, 27 files | `viewer/Separate STLs/` | third-party model, not redistributed here. The exact filenames are in `viewer_manifest.json`, under each part's `file` key |
+| the assembled reference STL, `2025+F1+Car+STL+Assembly (1).stl` | next to the geometry scripts | only needed to re-run `geometry/register_parts.py`. Its output is already committed as `viewer/registration.json`, so you can skip this |
+| `Tyres.stl` | next to the other STLs | `geometry/assemble.py` slices it into `tyre_q*.stl` |
+| decal images `d*.png` | `viewer/decals/` | optional, cut from a real livery sheet and not redistributed. Decals are off by default, so the manual runs without them |
+| `grounding/index.json` and its images | `viewer/grounding/` | optional grounding chooser. The fetch is wrapped in try/catch, so its absence only removes the picker |
+
+Without the STLs the right-hand photographic scene cannot render, and since
+that scene is the training target, nothing downstream works. Everything else
+degrades gracefully.
+
+The training data is deliberately not in the repo (about 2GB). The capture
+harness regenerates it from the manual in roughly 45 minutes. Trained
+checkpoints are not included either.
+
+Python dependencies are in `requirements.txt`. The viewer loads three.js r160
+from unpkg, so the browser needs network access.
 
 ## The renderer
 
