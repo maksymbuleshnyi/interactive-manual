@@ -61,14 +61,18 @@ JOINTS = [
 ]
 
 
-STL_DIR = os.path.join(os.path.dirname(HERE), 'Separate STLs')
+# In this repo the CAD and the derived manifests live under viewer/, one
+# level over from these scripts, so paths resolve there rather than beside
+# the script as they did in the original tree.
+VIEWER = os.path.join(os.path.dirname(HERE), 'viewer')
+STL_DIR = os.path.join(VIEWER, 'Separate STLs')
 
 
 def surface_points(name, spec, n_max=150000):
     """Dense surface sample of a placed part, from the RAW mesh (decimation
     would erase exactly the small mating features we are looking for)."""
     if 'tyre' in spec:
-        tri = read_stl(os.path.join(HERE, f"tyre_q{spec['tyre']}.stl"))
+        tri = read_stl(os.path.join(VIEWER, 'tyres', f"tyre_q{spec['tyre']}.stl"))
     else:
         tri = read_stl(os.path.join(STL_DIR, spec.get('src', name + '.stl')))
     v = tri.reshape(-1, 3)
@@ -255,7 +259,7 @@ def add_manual(out, fin):
 
 
 def main():
-    fin = json.load(open(os.path.join(HERE, 'assembly_final.json')))
+    fin = json.load(open(os.path.join(VIEWER, 'assembly_final.json')))
     pts = {n: surface_points(n, s) for n, s in fin.items()}
     print('sampled parts:', {k: len(v) for k, v in list(pts.items())[:3]},
           '...', flush=True)
@@ -320,7 +324,7 @@ def main():
         for p in j['patches']:
             v = insertion_axis(j['a'], j['b'], p, pos_of)
             p['insert'] = [round(float(x), 3) for x in v]
-    with open(os.path.join(HERE, 'glue_sites.json'), 'w') as f:
+    with open(os.path.join(VIEWER, 'glue_sites.json'), 'w') as f:
         json.dump(out, f, indent=1)
     print('saved glue_sites.json:', len(out), 'joints')
 

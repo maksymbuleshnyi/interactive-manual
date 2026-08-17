@@ -16,7 +16,12 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-ASSEMBLY = os.path.join(ROOT, '2025+F1+Car+STL+Assembly (1).stl')
+# In this repo the CAD and the derived manifests live under viewer/, one
+# level over from these scripts, so paths resolve there rather than beside
+# the script as they did in the original tree.
+VIEWER = os.path.join(os.path.dirname(HERE), 'viewer')
+# the assembled reference is NOT in the repo: see the README
+ASSEMBLY = os.path.join(VIEWER, '2025+F1+Car+STL+Assembly (1).stl')
 VOX = 0.6                      # occupancy voxel (mm); tolerance ~= 2*VOX
 
 
@@ -93,8 +98,8 @@ def main():
 
     rng = np.random.RandomState(0)
     out = {}
-    files = sorted(glob.glob(os.path.join(ROOT, 'Separate STLs', '*.stl')))
-    files += sorted(glob.glob(os.path.join(HERE, 'tyre_q*.stl')))
+    files = sorted(glob.glob(os.path.join(VIEWER, 'Separate STLs', '*.stl')))
+    files += sorted(glob.glob(os.path.join(VIEWER, 'tyres', 'tyre_q*.stl')))
     for path in files:
         name = os.path.splitext(os.path.basename(path))[0]
         if name == 'Tyres':
@@ -135,7 +140,7 @@ def main():
         print(f'{name:28s} instances={len(found)} '
               f'inl={[round(float(f[2]),2) for f in found]}', flush=True)
 
-    with open(os.path.join(HERE, 'registration.json'), 'w') as fjs:
+    with open(os.path.join(VIEWER, 'registration.json'), 'w') as fjs:
         json.dump(out, fjs)
     print('saved registration.json', flush=True)
 

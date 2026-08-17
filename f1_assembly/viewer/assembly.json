@@ -1,0 +1,322 @@
+{
+ "Mid Body": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   0,
+   0,
+   0
+  ]
+ },
+ "Front Body": {
+  "map": [
+   "y",
+   "-z",
+   "-x"
+  ],
+  "pos": [
+   110,
+   -16,
+   0
+  ]
+ },
+ "Back Body": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   -90,
+   5,
+   0
+  ]
+ },
+ "Left Rear Suspension": {
+  "map": [
+   "x",
+   "z",
+   "-y"
+  ],
+  "pos": [
+   -86,
+   -12,
+   25
+  ]
+ },
+ "Right Rear Suspension": {
+  "map": [
+   "x",
+   "-z",
+   "y"
+  ],
+  "pos": [
+   -86,
+   -12,
+   -25
+  ]
+ },
+ "Rear Axle": {
+  "map": [
+   "y",
+   "-x",
+   "z"
+  ],
+  "pos": [
+   -86,
+   -19,
+   0
+  ]
+ },
+ "Rear Wheel Hub 1": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   -86,
+   -19,
+   34
+  ]
+ },
+ "Rear Wheel Hub 2": {
+  "map": [
+   "y",
+   "-z",
+   "-x"
+  ],
+  "pos": [
+   -86,
+   -19,
+   -34
+  ]
+ },
+ "Rear Tyre L": {
+  "src": "Tyres.stl",
+  "tyre": 0,
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   -86,
+   -19,
+   34
+  ]
+ },
+ "Rear Tyre R": {
+  "src": "Tyres.stl",
+  "tyre": 1,
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   -86,
+   -19,
+   -34
+  ]
+ },
+ "Front Wheel Hub 1": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   95,
+   -19,
+   36
+  ]
+ },
+ "Front Wheel Hub 2": {
+  "map": [
+   "y",
+   "-z",
+   "-x"
+  ],
+  "pos": [
+   95,
+   -19,
+   -36
+  ]
+ },
+ "Front Wheel Inner Hub A 1": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   95,
+   -19,
+   33
+  ]
+ },
+ "Front Wheel Inner Hub B 1": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   95,
+   -19,
+   33
+  ]
+ },
+ "Front Wheel Inner Hub A 2": {
+  "map": [
+   "y",
+   "-z",
+   "-x"
+  ],
+  "pos": [
+   95,
+   -19,
+   -33
+  ]
+ },
+ "Front Wheel Inner Hub B 2": {
+  "map": [
+   "y",
+   "-z",
+   "-x"
+  ],
+  "pos": [
+   95,
+   -19,
+   -33
+  ]
+ },
+ "Front Tyre L": {
+  "src": "Tyres.stl",
+  "tyre": 2,
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   95,
+   -19,
+   36
+  ]
+ },
+ "Front Tyre R": {
+  "src": "Tyres.stl",
+  "tyre": 3,
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   95,
+   -19,
+   -36
+  ]
+ },
+ "Halo": {
+  "map": [
+   "-x",
+   "-z",
+   "-y"
+  ],
+  "pos": [
+   30,
+   28,
+   0
+  ]
+ },
+ "Top Camera Mount": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   8,
+   42,
+   0
+  ]
+ },
+ "Side Camera Mount": {
+  "map": [
+   "y",
+   "z",
+   "x"
+  ],
+  "pos": [
+   35,
+   8,
+   24
+  ]
+ },
+ "Rear Stabiliser Fin": {
+  "map": [
+   "y",
+   "x",
+   "-z"
+  ],
+  "pos": [
+   -50,
+   32,
+   0
+  ]
+ },
+ "Front Mini-Wing": {
+  "map": [
+   "-y",
+   "x",
+   "z"
+  ],
+  "pos": [
+   125,
+   6,
+   0
+  ]
+ },
+ "Locating Pin 1": {
+  "map": [
+   "-z",
+   "y",
+   "x"
+  ],
+  "pos": [
+   -67,
+   18,
+   0
+  ]
+ },
+ "Locating Pin 2": {
+  "map": [
+   "-z",
+   "y",
+   "x"
+  ],
+  "pos": [
+   -67,
+   -8,
+   12
+  ]
+ },
+ "Locating Pin 3": {
+  "map": [
+   "-z",
+   "y",
+   "x"
+  ],
+  "pos": [
+   -67,
+   -8,
+   -12
+  ]
+ }
+}

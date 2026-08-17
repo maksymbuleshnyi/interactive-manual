@@ -22,11 +22,13 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, 'real_grounding'))
-from render_geometry_maps import render_maps            # noqa: E402
 from PIL import Image, ImageDraw                        # noqa: E402
 
-STL_DIR = os.path.join(ROOT, 'Separate STLs')
+# In this repo the CAD and the derived manifests live under viewer/, one
+# level over from these scripts, so paths resolve there rather than beside
+# the script as they did in the original tree.
+VIEWER = os.path.join(os.path.dirname(HERE), 'viewer')
+STL_DIR = os.path.join(VIEWER, 'Separate STLs')
 
 
 def read_stl(path):
@@ -110,12 +112,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--parts', default=None,
                     help='comma-separated subset to render')
-    ap.add_argument('--out', default=os.path.join(HERE,
+    ap.add_argument('--out', default=os.path.join(VIEWER,
                                                   'assembled_views.jpg'))
     ap.add_argument('--res', type=int, default=540)
     a = ap.parse_args()
 
-    asm = json.load(open(os.path.join(HERE, 'assembly.json')))
+    asm = json.load(open(os.path.join(VIEWER, 'assembly.json')))
     names = [n.strip() for n in a.parts.split(',')] if a.parts else list(asm)
 
     meshes = {}
@@ -177,6 +179,9 @@ def main():
         fr = {'parts': [str(p) for p in meshes],
               'intrinsics': [K] * len(meshes),
               'extrinsics': [E.tolist()] * len(meshes)}
+        # only the preview sheet needs these; they live in the furniture
+        # pipeline and are not part of this prototype
+        from render_geometry_maps import render_maps
         _, normal, pid = render_maps(fr, meshes, RES, RES)
         t = Image.new('RGB', (RES * 2, RES + 24), (16, 16, 20))
         t.paste(normal, (0, 24))

@@ -26,6 +26,7 @@ filling in geometry, not just shading it. Full clip: [`docs/manual_demo.mp4`](do
 | `viewer/index.html` | the manual itself: two synchronised scenes, hover identification, per-step guidance, glue placement, insertion axes. Also the data capture harness (`?traj=1`, `?pairs=1`, `?sch=1`) and the live client for the render service |
 | `viewer/viewer_manifest.json` | per-part pose, dimensions, role, group; the 17 steps and their joints |
 | `viewer/glue_sites.json` | contact patches between registered parts: where glue goes, over what area, along which insertion axis |
+| `geometry/assemble.py` | slices `Tyres.stl` into the four wheel meshes and writes `assembly_final.json` |
 | `geometry/register_parts.py` | registers each separate STL into the assembled reference by exact triangle congruence, then ICP |
 | `geometry/contacts.py` | extracts contact patches between registered parts and derives insertion axes |
 | `renderer/train_memory_cn.py` | trains the renderer |
@@ -46,7 +47,7 @@ Not included, and why:
 | --- | --- | --- |
 | the training data, ~2GB | none | the capture harness regenerates it from the manual in ~45 minutes |
 | trained checkpoints | none | retrain, ~1 hour |
-| the assembled reference STL, 40MB | none | only needed to re-run `geometry/register_parts.py`, and its output is already committed as `viewer/registration.json` |
+| the assembled reference STL, 40MB | `geometry/register_parts.py` cannot be re-run | its output is already committed as `viewer/registration.json`, so registration does not need repeating. Drop the file into `viewer/` if you want to redo it |
 | decal images | decals unavailable | cut from a real livery sheet; off by default (`decalsOn = false`) |
 | `grounding/index.json` and images | the grounding chooser disappears | the fetch is wrapped in try/catch |
 
