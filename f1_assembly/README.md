@@ -36,10 +36,11 @@ filling in geometry, not just shading it. Full clip: [`docs/manual_demo.mp4`](do
 
 ## What is and is not in the repo
 
-The CAD **is** included: the 24 part STLs the viewer loads sit in
-`viewer/Separate STLs/` and `viewer/tyres/`, so the manual runs as soon as you
-clone. They are a third-party 3D printed kit, redistributed here for research
-reproducibility.
+All the CAD **is** included: the 24 part STLs the viewer loads sit in
+`viewer/Separate STLs/` and `viewer/tyres/`, and the assembled reference the
+registration matches against is `viewer/2025+F1+Car+STL+Assembly (1).stl`. So
+every stage runs from a clone, registration included. They are a third-party
+3D printed kit, redistributed here for research reproducibility.
 
 Not included, and why:
 
@@ -47,7 +48,6 @@ Not included, and why:
 | --- | --- | --- |
 | the training data, ~2GB | none | the capture harness regenerates it from the manual in ~45 minutes |
 | trained checkpoints | none | retrain, ~1 hour |
-| the assembled reference STL, 40MB | `geometry/register_parts.py` cannot be re-run | its output is already committed as `viewer/registration.json`, so registration does not need repeating. Drop the file into `viewer/` if you want to redo it |
 | decal images | decals unavailable | cut from a real livery sheet; off by default (`decalsOn = false`) |
 | `grounding/index.json` and images | the grounding chooser disappears | the fetch is wrapped in try/catch |
 
