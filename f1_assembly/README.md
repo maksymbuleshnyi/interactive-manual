@@ -8,7 +8,7 @@ receives depth, a flat colour map and a memory picture rendered from the
 agent's own boxes, and whatever detail appears in the output was added by the
 model.
 
-The object is a 3D printed Formula One kit: 23 parts, 17 assembly steps. It
+The object is a 3D printed Formula One kit: 27 parts over 17 assembly steps. It
 was chosen over furniture because an agent cannot reproduce it from the manual
 alone and its structure is much less regular.
 

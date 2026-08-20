@@ -15,9 +15,10 @@ spending the GPU.
 pip install -r requirements.txt      # torch, diffusers, fastapi, trimesh, ...
 ```
 
-Put the 27 kit STLs in `viewer/Separate STLs/`. The filenames must match the
-`file` key of each entry in `viewer_manifest.json`. Nothing works without them:
-they are the training target.
+Put the kit STLs in `viewer/Separate STLs/` (24 files, referenced by 27 part
+entries: a few parts, such as the locating pins, share one mesh). The filenames
+must match the `file` key of each entry in `viewer_manifest.json`. Nothing works
+without them: they are the training target.
 
 **Check:**
 
@@ -45,7 +46,7 @@ lit workshop scene using the real CAD. Hover names parts, the step list walks
 the build, and arrows plus glue dots come from measured contact patches, not
 from guesses.
 
-**Check:** all 23 parts load, the step list runs 1 to 17, and the wheels enter
+**Check:** all 27 parts load, the step list runs 1 to 17, and the wheels enter
 from outside the car.
 
 ---
