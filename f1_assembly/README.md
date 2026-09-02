@@ -122,4 +122,7 @@ cheap the model gets.
 
 Overfit to this one kit, by design. Colour stability and temporal consistency
 are still imperfect when the camera turns quickly. The open questions are
-whether it transfers to a second object and what the scaling curve looks like.
+whether it transfers to a second object and what the scaling curve looks like:
+that experiment lives in [`../ikea_scaling`](../ikea_scaling), which trains
+the same conditioning idea across up to 32 real furniture items and evaluates
+only on objects held out from training.

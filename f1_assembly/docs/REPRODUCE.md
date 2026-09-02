@@ -139,12 +139,18 @@ are visible there and invisible in a still.
 python eval_memory.py --cn memory_cn9/controlnet --data ../viewer/traindata
 ```
 
-Runs each held-out frame twice with identical noise and fixed timesteps, once
-with the memory channels filled and once zeroed. Same frame, same noise, one
-variable.
+Factor-isolated ablation: each held-out frame runs under identical noise and
+fixed timesteps once per arm (full, no-memory, no-albedo, no-reference), and
+each arm differs from `full` in exactly ONE input. An earlier version zeroed
+albedo and memory together, so its "memory" number was really the effect of
+removing both; if you have results from before this fix, discard them.
 
-- change near 0%, wins near 50%: the model is ignoring the memory
-- negative change, wins above 50%: the memory is being used, and by how much
+- change near 0%, "worse" near 50%: the model ignores that input
+- positive change, "worse" above 50%: removing it hurt, so it is being used
+
+Confidence intervals are bootstrapped over sequences, not frames (neighbouring
+video frames are near-duplicates). Results land in `eval_factors.json` next to
+the checkpoint so every reported number traces to a run.
 
 Side-by-side video against the truth:
 
